@@ -1,9 +1,9 @@
 ### Hi there 👋
 <p>
-<a href="https://www.linkedin.com/in/elizabeth-cai/">
+<a href="https://www.linkedin.com/in/lizcai/">
   <img
     alt="LinkedIn"
-    src="https://img.shields.io/badge/elizabeth--cai-0A66C2?logo=linkedin&logoColor=white&style=flat"
+    src="https://img.shields.io/badge/lizcai-0A66C2?logo=linkedin&logoColor=white&style=flat"
   />
 </a>
 <a href="https://github.com/lbcai">
@@ -17,10 +17,10 @@ I'm currently working as a research associate in the biotech industry and I'm ne
 
 #### Languages and Tools 
 <p>
-<img src ="https://img.shields.io/badge/Python-3776AB?logo=Python&logoColor=white&style=flat" />
-<img src ="https://img.shields.io/badge/Java-007396?logo=Java&logoColor=white&style=flat" />
-<img src ="https://img.shields.io/badge/R-276DC3?logo=R&logoColor=white&style=flat" />
 <img src ="https://img.shields.io/badge/Git-F05032?logo=Git&logoColor=white&style=flat" />
+<img src ="https://img.shields.io/badge/Java-007396?logo=Java&logoColor=white&style=flat" />
+<img src ="https://img.shields.io/badge/Python-3776AB?logo=Python&logoColor=white&style=flat" />
+<img src ="https://img.shields.io/badge/R-276DC3?logo=R&logoColor=white&style=flat" />
 </p>
 
 
