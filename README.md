@@ -18,6 +18,8 @@ I'm currently working as a research associate in the biotech industry and I'm ne
 #### Languages and Tools 
 <p>
 <img src ="https://img.shields.io/badge/Git-F05032?logo=Git&logoColor=white&style=flat" />
+<img src ="https://img.shields.io/badge/HTML5-E34F26?logo=HTML5&logoColor=white&style=flat" />
+<img src ="https://img.shields.io/badge/CSS3-1572B6?logo=CSS3&logoColor=white&style=flat" />
 <img src ="https://img.shields.io/badge/Java-007396?logo=Java&logoColor=white&style=flat" />
 <img src ="https://img.shields.io/badge/Python-3776AB?logo=Python&logoColor=white&style=flat" />
 <img src ="https://img.shields.io/badge/R-276DC3?logo=R&logoColor=white&style=flat" />
