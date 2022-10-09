@@ -6,7 +6,7 @@ I'm currently working as a research associate in the biotech industry and I'm wo
 
 <p align="center">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=git,py,java,js,html,css,react,nodejs,mongodb" />
+    <img src="https://skillicons.dev/icons?i=git,py,java,js,html,css,react,angular,nodejs,mongodb" />
   </a>
 </p>
 
