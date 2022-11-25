@@ -1,7 +1,7 @@
 ### Hi there 👋
 
 <p>
-I'm currently working as a research associate in the biotech industry and I'm working towards a degree in Computer Science at the University of Pennsylvania. In my spare time, I like making digital art :art:
+I'm currently working towards a degree in Computer Science with the University of Pennsylvania. In my spare time, I like making digital art :art: and learning new things.
 </p>
 
 <p align="center">
