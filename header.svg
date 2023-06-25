@@ -1,0 +1,84 @@
+<svg fill="none" viewBox="0 0 400 400" width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+    <style>
+          :root{
+        --lb-cake-body: #adccd2;
+        --lb-cake-top: #f3f2e9;
+        --lemon-cake: #e1cfa0;
+        --blueberry-cake: #c4a5bb;
+        --lb-plate: #d2dcd7;
+    }
+
+    .canvas {
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+    }
+
+    .lemon-blueberry-cake {
+        top: -20px;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background: no-repeat;
+        background-image: radial-gradient(ellipse, var(--lb-plate) 60%, transparent 60.75%);
+        background-size: 26em 14em;
+        background-position: 50% 95%;
+    }
+
+    .lemon-blueberry-cake::after {
+        content: "";
+        position: relative;
+        display: inherit;
+        width: 16em;
+        height: 8em;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-image:
+            linear-gradient(var(--lb-cake-top), var(--lb-cake-top)),
+            linear-gradient(55deg, var(--lb-cake-top) 60%, transparent 60.75%);
+        background-size:
+            100% 50%,
+            100% 50%;
+        background-position:
+            0% 0%,
+            0% 100%;
+        border-radius: 50%;
+        left: 4.5em;
+        top: -7em;
+    }
+
+    .lemon-blueberry-cake::before {
+        content: "";
+        position: relative;
+        display: inherit;
+        width: 16em;
+        height: 12em;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-image:
+            linear-gradient(var(--lb-cake-body), var(--lb-cake-body)),
+            linear-gradient(var(--lb-cake-body), var(--lb-cake-body)),
+            linear-gradient(var(--lb-cake-body), var(--lb-cake-body)),
+            repeating-linear-gradient(to bottom, var(--blueberry-cake), var(--blueberry-cake) 1.8em, var(--lemon-cake) 1.8em, var(--lemon-cake) 3.3em);
+        background-size:
+            70% 70%,
+            30% 40%,
+            2% 70%;
+            60% 67%;
+        background-position:
+            0% 100%,
+            0% 5%,
+            100% 0%,
+            100% 0%;
+        border-bottom-left-radius: 10em 5em;
+        border-bottom-right-radius: 10em 5em;
+        left: 4.5em;
+        top: 9em;
+    }
+    </style>
+    <foreignObject width="100%" height="100%">
+        <div className="canvas" xmlns="http://www.w3.org/1999/xhtml">
+            <div class="lemon-blueberry-cake"></div>
+        </div>
+    </foreignObject>
+</svg>
