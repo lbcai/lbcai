@@ -17,8 +17,8 @@
     .lemon-blueberry-cake {
         top: -20px;
         position: relative;
-        width: 100%;
-        height: 100%;
+        width: 400px;
+        height: 400px;
         background: no-repeat;
         background-image: radial-gradient(ellipse, var(--lb-plate) 60%, transparent 60.75%);
         background-size: 26em 14em;
