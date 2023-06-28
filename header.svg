@@ -7,7 +7,13 @@
         --lb-cake-top-shade: #dad6bc;
         --lb-cake-top-mid: #e9e7d7;
         --lemon-cake: #ecdfa6;
-        --blueberry-cake: #d0a9c5;
+        --blueberry-cake: #cbadc2;
+        --blueberry: #2b2f2e;
+        --blueberry-ring-dark: #48504e;
+        --blueberry-light: #3c4442;
+        --blueberry-ring: #596260;
+        --bb-leaf-dark: #4f632c;
+        --bb-leaf: #79994c;
         --lb-plate: #d3ddd7;
         --lb-plate-shade: #abb7bb;
     }
@@ -49,16 +55,27 @@
         border-bottom-right-radius: 18em 9em;
         background: no-repeat;
         background-image:
+
+            radial-gradient(ellipse, var(--blueberry) 40%, var(--blueberry-ring-dark) 42%, var(--blueberry-ring-dark) 60%, transparent 65%),
+            radial-gradient(ellipse, var(--blueberry) 60%, transparent 65%),
+
             radial-gradient(ellipse, var(--lb-cake-top) 60%, transparent 60.75%),
 
             radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
             radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
             radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
-            radial-gradient(ellipse, var(--lb-cake-top-mid) 60%, transparent 60.75%),
-            radial-gradient(ellipse, var(--lb-cake-top-mid) 60%, transparent 60.75%),
-            radial-gradient(ellipse, var(--lb-cake-top-mid) 60%, transparent 60.75%),
+            radial-gradient(ellipse, var(--lb-cake-top-mid) 60%, transparent 64%),
+            radial-gradient(ellipse, var(--lb-cake-top-mid) 60%, transparent 64%),
+            radial-gradient(ellipse, var(--lb-cake-top-mid) 60%, transparent 64%),
             radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
-            radial-gradient(ellipse, var(--lb-cake-top-mid) 60%, transparent 60.75%),
+            radial-gradient(ellipse, var(--lb-cake-top-mid) 60%, transparent 64%),
+
+            radial-gradient(ellipse, var(--blueberry) 40%, var(--blueberry-ring-dark) 42%, var(--blueberry-ring-dark) 60%, transparent 65%),
+            radial-gradient(ellipse, var(--blueberry) 60%, transparent 65%),
+            radial-gradient(ellipse, var(--blueberry) 40%, var(--blueberry-ring-dark) 42%, var(--blueberry-ring-dark) 60%, transparent 65%),
+            radial-gradient(circle, var(--blueberry) 60%, transparent 65%),
+            radial-gradient(ellipse, var(--blueberry) 40%, var(--blueberry-ring-dark) 42%, var(--blueberry-ring-dark) 60%, transparent 65%),
+            radial-gradient(circle, var(--blueberry) 60%, transparent 65%),
 
 
             radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
@@ -70,8 +87,12 @@
             radial-gradient(ellipse, var(--lb-cake-top-mid) 60%, transparent 60.75%),
             radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
             radial-gradient(ellipse, var(--lb-cake-top-mid) 60%, transparent 60.75%),
+            radial-gradient(ellipse, var(--lb-cake-top-mid) 60%, transparent 64%),
+
+            radial-gradient(ellipse, var(--blueberry) 40%, var(--blueberry-ring-dark) 42%, var(--blueberry-ring-dark) 60%, transparent 65%),
+            radial-gradient(ellipse, var(--blueberry) 60%, transparent 65%),
+
             radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
-            radial-gradient(ellipse, var(--lb-cake-top-mid) 60%, transparent 60.75%),
             radial-gradient(ellipse, var(--lb-cake-top-mid) 60%, transparent 60.75%),
             radial-gradient(ellipse, var(--lb-cake-top-mid) 60%, transparent 60.75%),
             radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
@@ -84,6 +105,9 @@
             radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
             radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%);
         background-size:
+            5% 4%,
+            11% 12%,
+
             90% 50%,
 
             28% 45%,
@@ -95,6 +119,12 @@
             26% 25%,
             26% 25%,
 
+            5% 3%,
+            11% 12%,
+            4% 6%,
+            11% 11%,
+            5% 5%,
+            11% 11%,
 
             20% 34%,
             22% 34%,
@@ -106,6 +136,10 @@
             24% 34%,
             24% 34%,
             24% 34%,
+
+            5% 3%,
+            11% 11%,
+
             24% 34%,
             24% 34%,
             24% 34%,
@@ -119,6 +153,9 @@
             32% 31%,
             32% 31%;
         background-position:
+            38% 48%,
+            37% 51%,
+
             50% 100%,
 
             89% 101%,
@@ -130,6 +167,12 @@
             15% 76%,
             13% 72%,
 
+            65% 42%,
+            65% 45%,
+            90% 54%,
+            90% 55%,
+            31% 43%,
+            30% 45%,
 
             50% 69%,
             50% 64%,
@@ -140,9 +183,13 @@
             77% 62%,
             25% 70%,
             23% 64%,
+            0% 80%,
+
+            11% 49%,
+            8% 52%,
+
             19% 62%,
             16% 63%,
-            0% 80%,
             97% 89%,
             98% 84%,
             101% 80%,
@@ -168,74 +215,108 @@
         background-image:
             radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
             radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
-            radial-gradient(ellipse, var(--lb-cake-top) 60%, transparent 60.75%),
+            radial-gradient(ellipse, var(--lb-cake-top) 60%, transparent 64%),
+            radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 64%),
+            radial-gradient(ellipse, var(--lb-cake-top) 60%, transparent 64%),
+
+            radial-gradient(ellipse, var(--blueberry) 40%, var(--blueberry-ring) 42%, var(--blueberry-ring) 60%, transparent 65%),
+            radial-gradient(ellipse, var(--blueberry-light) 60%, transparent 65%),
+
             radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
             radial-gradient(ellipse, var(--lb-cake-top) 60%, transparent 60.75%),
-            radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
-            radial-gradient(ellipse, var(--lb-cake-top) 60%, transparent 60.75%),
-            radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
-            radial-gradient(ellipse, var(--lb-cake-top) 60%, transparent 60.75%),
-            radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
-            radial-gradient(ellipse, var(--lb-cake-top) 60%, transparent 60.75%),
-            radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
-            radial-gradient(ellipse, var(--lb-cake-top) 60%, transparent 60.75%),
-            radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
-            radial-gradient(ellipse, var(--lb-cake-top) 60%, transparent 60.75%),
+
             radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
             radial-gradient(ellipse, var(--lb-cake-top) 60%, transparent 60.75%),
             radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
-            radial-gradient(ellipse, var(--lb-cake-top) 60%, transparent 60.75%),
-            radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
-            radial-gradient(ellipse, var(--lb-cake-top) 60%, transparent 60.75%),
-            radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
-            radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
-            radial-gradient(ellipse, var(--lb-cake-top) 60%, transparent 60.75%),
-            radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
-            radial-gradient(ellipse, var(--lb-cake-top) 60%, transparent 60.75%),
-            radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
+            radial-gradient(ellipse, var(--lb-cake-top) 60%, transparent 64%),
+
+            radial-gradient(ellipse, var(--blueberry) 40%, var(--blueberry-ring-dark) 42%, var(--blueberry-ring-dark) 60%, transparent 65%),
+            radial-gradient(ellipse, var(--blueberry) 60%, transparent 65%),
+            radial-gradient(ellipse, var(--blueberry-light) 60%, transparent 65%),
+
             radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
             radial-gradient(ellipse, var(--lb-cake-top) 60%, transparent 60.75%),
             radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
             radial-gradient(ellipse, var(--lb-cake-top) 60%, transparent 60.75%),
             radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
-            radial-gradient(ellipse, var(--lb-cake-top) 60%, transparent 60.75%),
+            radial-gradient(ellipse, var(--lb-cake-top) 60%, transparent 64%),
+
+            radial-gradient(ellipse, var(--blueberry) 40%, var(--blueberry-ring) 42%, var(--blueberry-ring) 60%, transparent 65%),
+            radial-gradient(ellipse, var(--blueberry-light) 60%, transparent 65%),
+
             radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
             radial-gradient(ellipse, var(--lb-cake-top) 60%, transparent 60.75%),
 
             radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
             radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
+            radial-gradient(ellipse, var(--lb-cake-top) 60%, transparent 60.75%),
             radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
+            radial-gradient(ellipse, var(--lb-cake-top) 60%, transparent 60.75%),
             radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
+            radial-gradient(ellipse, var(--lb-cake-top) 60%, transparent 64%),
+
+            radial-gradient(ellipse, var(--blueberry) 40%, var(--blueberry-ring) 42%, var(--blueberry-ring) 60%, transparent 65%),
+            radial-gradient(ellipse, var(--blueberry-light) 60%, transparent 65%),
+
             radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
+            radial-gradient(ellipse, var(--lb-cake-top) 60%, transparent 60.75%),
             radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
-            radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%);
+            radial-gradient(ellipse, var(--lb-cake-top) 60%, transparent 60.75%),
+            radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 62%),
+            radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
+            radial-gradient(ellipse, var(--lb-cake-top) 60%, transparent 60.75%),
+
+            radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
+            radial-gradient(ellipse, var(--lb-cake-top) 60%, transparent 60.75%),
+
+            radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
+            radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 64%),
+
+            radial-gradient(ellipse, var(--blueberry) 40%, var(--blueberry-ring-dark) 42%, var(--blueberry-ring-dark) 60%, transparent 65%),
+            radial-gradient(ellipse, var(--blueberry) 60%, transparent 65%),
+
+            radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 62%),
+            radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 62%),
+            radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 62%),
+            radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 62%),
+            radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 62%),
+
+            radial-gradient(ellipse, var(--blueberry) 60%, transparent 65%);
         background-size:
             40% 20%,
             32% 20%,
             40% 20%,
             30% 20%,
             50% 40%,
+
+            6% 6%,
+            12% 12%,
+
             20% 50%,
-            20% 50%,
+            20% 40%,
+
             20% 20%,
             20% 50%,
             20% 50%,
             20% 30%,
+
+            6% 3%,
+            12% 12%,
+            12% 13%,
+
             18% 20%,
             29% 24%,
             31% 24%,
             27% 24%,
             30% 24%,
             30% 28%,
-            14% 22%,
-            14% 22%,
-            14% 22%,
-            12% 22%,
-            12% 22%,
-            12% 25%,
-            12% 25%,
+
+            6% 4%,
+            13% 13%,
+
             35% 20%,
             40% 20%,
+
             40% 20%,
             15% 15%,
             28% 26%,
@@ -243,43 +324,69 @@
             26% 21%,
             28% 30%,
             25% 30%,
+
+            5% 5%,
+            11% 13%,
+
+            14% 22%,
+            14% 22%,
+            14% 22%,
+            12% 22%,
+            12% 22%,
+            12% 25%,
+            12% 25%,
+
             30% 21%,
             29% 28%,
 
             10% 25%,
             15% 25%,
+
+            5% 5%,
+            11% 12%,
+
             10% 25%,
             34% 32%,
-            30% 35%,
+            26% 30%,
             34% 32%,
-            35% 30%;
+            35% 30%,
+
+            12% 12%;
         background-position:
             115% 109%,
             60% 119%,
             64% 116%,
             68% 114%,
             129% 135%,
+
+            83% 87%,
+            83% 87%,
+
             114% 140%,
-            112% 134%,
+            112% 119%,
+
             109% 95%,
             105% 136%,
             103% 133%,
             100% 97%,
+
+            91% 66%,
+            94% 72%,
+            56% 97%,
+
             74% 110%,
             77% 111%,
             77% 108%,
             77% 105%,
             -18% 106%,
             -12% 109%,
-            -8% 93%,
-            -6% 91%,
-            -5% 88%,
-            -3% 85%,
-            -3% 82%,
-            0% 88%,
-            2% 85%,
+
+            27% 92%,
+            25% 93%,
+
             10% 115%,
             7% 112%,
+
             7% 110%,
             12% 98%,
             4% 108%,
@@ -287,16 +394,34 @@
             35% 112%,
             7% 111%,
             7% 107%,
+
+            9% 75%,
+            6% 80%,
+
+            -8% 93%,
+            -6% 91%,
+            -5% 88%,
+            -3% 85%,
+            -3% 82%,
+            0% 88%,
+            2% 85%,
+
             35% 109%,
             40% 115%,
 
             0% 90%,
             0% 82%,
+
+            10% 63%,
+            8% 66%,
+
             5% 85%,
             0% 107%,
-            110% 100%,
+            104% 95%,
             80% 113%,
-            40% 115%;
+            40% 115%,
+
+            50% 91%;
     }
 
     .lbc-complete {
@@ -755,32 +880,44 @@
         height: 100%;
         background: no-repeat;
         background-image:
+
+            radial-gradient(ellipse, var(--blueberry) 40%, var(--blueberry-ring-dark) 42%, var(--blueberry-ring-dark) 60%, transparent 65%),
+            radial-gradient(ellipse, var(--blueberry) 60%, transparent 65%),
+
             radial-gradient(ellipse, var(--lb-cake-top) 60%, transparent 60.75%),
 
-            radial-gradient(ellipse, var(--lb-cake-top-mid) 60%, transparent 60.75%),
             radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
+            radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
+            radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
+            radial-gradient(ellipse, var(--lb-cake-top-mid) 60%, transparent 64%),
+            radial-gradient(ellipse, var(--lb-cake-top-mid) 60%, transparent 64%),
+            radial-gradient(ellipse, var(--lb-cake-top-mid) 60%, transparent 64%),
+            radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
+            radial-gradient(ellipse, var(--lb-cake-top-mid) 60%, transparent 64%),
+
+            radial-gradient(ellipse, var(--blueberry) 40%, var(--blueberry-ring-dark) 42%, var(--blueberry-ring-dark) 60%, transparent 65%),
+            radial-gradient(ellipse, var(--blueberry) 60%, transparent 65%),
+            radial-gradient(ellipse, var(--blueberry) 40%, var(--blueberry-ring-dark) 42%, var(--blueberry-ring-dark) 60%, transparent 65%),
+            radial-gradient(circle, var(--blueberry) 60%, transparent 65%),
+            radial-gradient(ellipse, var(--blueberry) 40%, var(--blueberry-ring-dark) 42%, var(--blueberry-ring-dark) 60%, transparent 65%),
+            radial-gradient(circle, var(--blueberry) 60%, transparent 65%),
+
 
             radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
-            radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
-            radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
-            radial-gradient(ellipse, var(--lb-cake-top-mid) 60%, transparent 60.75%),
-            radial-gradient(ellipse, var(--lb-cake-top-mid) 60%, transparent 60.75%),
             radial-gradient(ellipse, var(--lb-cake-top-mid) 60%, transparent 60.75%),
             radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
             radial-gradient(ellipse, var(--lb-cake-top-mid) 60%, transparent 60.75%),
+            radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
+            radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
+            radial-gradient(ellipse, var(--lb-cake-top-mid) 60%, transparent 60.75%),
+            radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
+            radial-gradient(ellipse, var(--lb-cake-top-mid) 60%, transparent 60.75%),
+            radial-gradient(ellipse, var(--lb-cake-top-mid) 60%, transparent 64%),
 
+            radial-gradient(ellipse, var(--blueberry) 40%, var(--blueberry-ring-dark) 42%, var(--blueberry-ring-dark) 60%, transparent 65%),
+            radial-gradient(ellipse, var(--blueberry) 60%, transparent 65%),
 
             radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
-            radial-gradient(ellipse, var(--lb-cake-top-mid) 60%, transparent 60.75%),
-            radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
-            radial-gradient(ellipse, var(--lb-cake-top-mid) 60%, transparent 60.75%),
-            radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
-            radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
-            radial-gradient(ellipse, var(--lb-cake-top-mid) 60%, transparent 60.75%),
-            radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
-            radial-gradient(ellipse, var(--lb-cake-top-mid) 60%, transparent 60.75%),
-            radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
-            radial-gradient(ellipse, var(--lb-cake-top-mid) 60%, transparent 60.75%),
             radial-gradient(ellipse, var(--lb-cake-top-mid) 60%, transparent 60.75%),
             radial-gradient(ellipse, var(--lb-cake-top-mid) 60%, transparent 60.75%),
             radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
@@ -793,10 +930,10 @@
             radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
             radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%);
         background-size:
-            90% 50%,
+            5% 4%,
+            11% 12%,
 
-            8% 11%,
-            13% 20%,
+            90% 50%,
 
             28% 45%,
             32% 25%,
@@ -807,6 +944,12 @@
             26% 25%,
             26% 25%,
 
+            5% 3%,
+            11% 12%,
+            4% 6%,
+            11% 11%,
+            5% 5%,
+            11% 11%,
 
             20% 34%,
             22% 34%,
@@ -818,6 +961,10 @@
             24% 34%,
             24% 34%,
             24% 34%,
+
+            5% 3%,
+            11% 11%,
+
             24% 34%,
             24% 34%,
             24% 34%,
@@ -831,10 +978,10 @@
             32% 31%,
             32% 31%;
         background-position:
-            50% calc(100% + 48px),
+            38% calc(48% + 48px),
+            37% calc(51% + 48px),
 
-            99% calc(78% + 48px),
-            103% calc(82% + 48px),
+            50% calc(100% + 48px),
 
             89% calc(101% + 48px),
             65% calc(67% + 48px),
@@ -845,6 +992,12 @@
             15% calc(76% + 48px),
             13% calc(72% + 48px),
 
+            65% calc(42% + 48px),
+            65% calc(45% + 48px),
+            90% calc(54% + 48px),
+            90% calc(55% + 48px),
+            31% calc(43% + 48px),
+            30% calc(45% + 48px),
 
             50% calc(69% + 48px),
             50% calc(64% + 48px),
@@ -855,9 +1008,13 @@
             77% calc(62% + 48px),
             25% calc(70% + 48px),
             23% calc(64% + 48px),
+            0% calc(80% + 48px),
+
+            11% calc(49% + 48px),
+            8% calc(52% + 48px),
+
             19% calc(62% + 48px),
             16% calc(63% + 48px),
-            0% calc(80% + 48px),
             97% calc(89% + 48px),
             98% calc(84% + 48px),
             101% calc(80% + 48px),
@@ -877,7 +1034,7 @@
         width: 15em;
         height: 48%;
         background: no-repeat;
-        animation: 4s infinite jiggle-partial-front;
+        animation: 4s infinite jiggle-partial-front-cream;
         transform-origin: 0% 320px;
     }
 
@@ -892,80 +1049,85 @@
         border-bottom-right-radius: 18em 9em;
         background: no-repeat;
         background-image:
-            linear-gradient(60deg, transparent, transparent 50%, var(--lb-cake-top-shade) 50%),
-            linear-gradient(72deg, transparent, transparent 50%, var(--lb-cake-top-shade) 50%),
             radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
+            radial-gradient(ellipse, var(--lb-cake-top) 60%, transparent 64%),
+            radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 64%),
+
+            radial-gradient(ellipse, var(--blueberry) 40%, var(--blueberry-ring) 42%, var(--blueberry-ring) 60%, transparent 65%),
+
             radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
+
+            radial-gradient(ellipse, var(--blueberry-light) 60%, transparent 65%),
+
             radial-gradient(ellipse, var(--lb-cake-top) 60%, transparent 60.75%),
             radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
             radial-gradient(ellipse, var(--lb-cake-top) 60%, transparent 60.75%),
             radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
-            radial-gradient(ellipse, var(--lb-cake-top) 60%, transparent 60.75%),
-            radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
-            radial-gradient(ellipse, var(--lb-cake-top) 60%, transparent 60.75%),
-            radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
-            radial-gradient(ellipse, var(--lb-cake-top) 60%, transparent 60.75%),
-            radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
-            radial-gradient(ellipse, var(--lb-cake-top) 60%, transparent 60.75%),
-            radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
-            radial-gradient(ellipse, var(--lb-cake-top) 60%, transparent 60.75%),
-            radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
-            radial-gradient(ellipse, var(--lb-cake-top) 60%, transparent 60.75%),
-            radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
-            radial-gradient(ellipse, var(--lb-cake-top) 60%, transparent 60.75%),
-            radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
-            radial-gradient(ellipse, var(--lb-cake-top) 60%, transparent 60.75%),
-            radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
-            radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
-            radial-gradient(ellipse, var(--lb-cake-top) 60%, transparent 60.75%),
-            radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
-            radial-gradient(ellipse, var(--lb-cake-top) 60%, transparent 60.75%),
-            radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
-            radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
-            radial-gradient(ellipse, var(--lb-cake-top) 60%, transparent 60.75%),
-            radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
-            radial-gradient(ellipse, var(--lb-cake-top) 60%, transparent 60.75%),
-            radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
-            radial-gradient(ellipse, var(--lb-cake-top) 60%, transparent 60.75%),
+            radial-gradient(ellipse, var(--lb-cake-top) 60%, transparent 64%),
+
+            radial-gradient(ellipse, var(--blueberry) 40%, var(--blueberry-ring) 42%, var(--blueberry-ring) 60%, transparent 65%),
+            radial-gradient(ellipse, var(--blueberry-light) 60%, transparent 65%),
+
             radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
             radial-gradient(ellipse, var(--lb-cake-top) 60%, transparent 60.75%),
 
             radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
             radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
+            radial-gradient(ellipse, var(--lb-cake-top) 60%, transparent 60.75%),
             radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
+            radial-gradient(ellipse, var(--lb-cake-top) 60%, transparent 60.75%),
             radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
+            radial-gradient(ellipse, var(--lb-cake-top) 60%, transparent 64%),
+
+            radial-gradient(ellipse, var(--blueberry) 40%, var(--blueberry-ring) 42%, var(--blueberry-ring) 60%, transparent 65%),
+            radial-gradient(ellipse, var(--blueberry-light) 60%, transparent 65%),
+
             radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
+            radial-gradient(ellipse, var(--lb-cake-top) 60%, transparent 60.75%),
             radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
-            radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%);
+            radial-gradient(ellipse, var(--lb-cake-top) 60%, transparent 60.75%),
+            radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 62%),
+            radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
+            radial-gradient(ellipse, var(--lb-cake-top) 60%, transparent 60.75%),
+
+            radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
+            radial-gradient(ellipse, var(--lb-cake-top) 60%, transparent 60.75%),
+
+            radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 64%),
+
+            radial-gradient(ellipse, var(--blueberry) 40%, var(--blueberry-ring-dark) 42%, var(--blueberry-ring-dark) 60%, transparent 65%),
+            radial-gradient(ellipse, var(--blueberry) 60%, transparent 65%),
+
+
+            radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 62%),
+
+            radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 62%),
+            radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 62%),
+
+            radial-gradient(ellipse, var(--blueberry) 60%, transparent 65%);
         background-size:
-            30% 10%,
-            30% 10%,
-            40% 20%,
             32% 20%,
             40% 20%,
             30% 20%,
-            50% 40%,
+
+            6% 6%,
+
             20% 50%,
-            20% 50%,
-            20% 20%,
-            20% 50%,
-            20% 50%,
-            20% 30%,
-            18% 20%,
+
+            12% 13%,
+
             29% 24%,
             31% 24%,
             27% 24%,
             30% 24%,
             30% 28%,
-            14% 22%,
-            14% 22%,
-            14% 22%,
-            12% 22%,
-            12% 22%,
-            12% 25%,
-            12% 25%,
+
+            6% 4%,
+            13% 13%,
+
             35% 20%,
             40% 20%,
+
             40% 20%,
             15% 15%,
             28% 26%,
@@ -973,45 +1135,54 @@
             26% 21%,
             28% 30%,
             25% 30%,
+
+            5% 5%,
+            11% 13%,
+
+            14% 22%,
+            14% 22%,
+            14% 22%,
+            12% 22%,
+            12% 22%,
+            12% 25%,
+            12% 25%,
+
             30% 21%,
             29% 28%,
 
-            10% 25%,
             15% 25%,
-            10% 25%,
+
+            5% 5%,
+            11% 12%,
+
             34% 32%,
-            30% 35%,
             34% 32%,
-            35% 30%;
+            35% 30%,
+
+            12% 12%;
         background-position:
-            73% 105%,
-            69% 93%,
-            115% 109%,
             60% 119%,
             64% 116%,
             68% 114%,
-            129% 135%,
+
+            83% 87%,
+
             114% 140%,
-            112% 134%,
-            109% 95%,
-            105% 136%,
-            103% 133%,
-            100% 97%,
-            74% 110%,
+
+            56% 97%,
+
             77% 111%,
             77% 108%,
             77% 105%,
             -18% 106%,
             -12% 109%,
-            -8% 93%,
-            -6% 91%,
-            -5% 88%,
-            -3% 85%,
-            -3% 82%,
-            0% 88%,
-            2% 85%,
+
+            27% 92%,
+            25% 93%,
+
             10% 115%,
             7% 112%,
+
             7% 110%,
             12% 98%,
             4% 108%,
@@ -1019,16 +1190,31 @@
             35% 112%,
             7% 111%,
             7% 107%,
+
+            9% 75%,
+            6% 80%,
+
+            -8% 93%,
+            -6% 91%,
+            -5% 88%,
+            -3% 85%,
+            -3% 82%,
+            0% 88%,
+            2% 85%,
+
             35% 109%,
             40% 115%,
 
-            0% 90%,
             0% 82%,
-            5% 85%,
+
+            10% 63%,
+            8% 66%,
+
             0% 107%,
-            110% 100%,
             80% 113%,
-            40% 115%;
+            40% 115%,
+
+            50% 91%;
     }
 
     .lbc-cream-front-2 {
@@ -1052,16 +1238,24 @@
         background: no-repeat;
         background-image:
             radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
+            radial-gradient(ellipse, red 60%, transparent 60.75%),
+            radial-gradient(ellipse, var(--lb-cake-top) 60%, transparent 60.75%),
+            radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
+            radial-gradient(ellipse, var(--lb-cake-top) 60%, transparent 64%),
+
+            radial-gradient(ellipse, var(--blueberry) 40%, var(--blueberry-ring) 42%, var(--blueberry-ring) 60%, transparent 65%),
+            radial-gradient(ellipse, var(--blueberry-light) 60%, transparent 65%),
+
             radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
             radial-gradient(ellipse, var(--lb-cake-top) 60%, transparent 60.75%),
             radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
             radial-gradient(ellipse, var(--lb-cake-top) 60%, transparent 60.75%),
             radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
-            radial-gradient(ellipse, var(--lb-cake-top) 60%, transparent 60.75%),
-            radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
-            radial-gradient(ellipse, var(--lb-cake-top) 60%, transparent 60.75%),
-            radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
-            radial-gradient(ellipse, var(--lb-cake-top) 60%, transparent 60.75%),
+            radial-gradient(ellipse, var(--lb-cake-top) 60%, transparent 64%),
+
+            radial-gradient(ellipse, var(--blueberry) 40%, var(--blueberry-ring-dark) 42%, var(--blueberry-ring-dark) 60%, transparent 65%),
+            radial-gradient(ellipse, var(--blueberry) 60%, transparent 65%),
+
             radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
             radial-gradient(ellipse, var(--lb-cake-top) 60%, transparent 60.75%),
             radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
@@ -1087,25 +1281,28 @@
             radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
             radial-gradient(ellipse, var(--lb-cake-top) 60%, transparent 60.75%),
 
-            radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
-            radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
-            radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
-            radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
-            radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
-            radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
-            radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%);
+            radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 62%),
+            radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 62%);
         background-size:
             40% 20%,
             32% 20%,
             40% 20%,
             30% 20%,
             50% 40%,
+
+            6% 6%,
+            12% 12%,
+
             20% 50%,
             20% 40%,
             20% 20%,
             20% 50%,
             20% 50%,
             20% 30%,
+
+            6% 3%,
+            12% 12%,
+
             18% 20%,
             29% 24%,
             31% 24%,
@@ -1131,25 +1328,28 @@
             30% 21%,
             29% 28%,
 
-            10% 25%,
-            15% 25%,
-            10% 25%,
-            34% 32%,
             26% 30%,
-            34% 32%,
-            35% 30%;
+            34% 32%;
         background-position:
             115% 109%,
             60% 119%,
             64% 116%,
             68% 114%,
             129% 135%,
+
+            83% 87%,
+            83% 87%,
+
             114% 140%,
             112% 119%,
             109% 95%,
             105% 136%,
             103% 133%,
             100% 97%,
+
+            91% 66%,
+            94% 72%,
+
             74% 110%,
             77% 111%,
             77% 108%,
@@ -1175,13 +1375,8 @@
             35% 109%,
             40% 115%,
 
-            0% 90%,
-            0% 82%,
-            5% 85%,
-            0% 107%,
             104% 95%,
-            80% 113%,
-            40% 115%;
+            80% 113%;
     }
 
     .lbc-cream-front-cutoff {
@@ -1206,7 +1401,7 @@
 
     @keyframes jiggle-complete {
         0% {
-            transform: scaleY(1.01);
+            transform: scaleY(1.03);
             opacity: 1;
         }
 
@@ -1219,32 +1414,19 @@
         }
 
         9% {
-            transform: scaleY(1.01);
-        }
-
-        12% {
-            transform: scaleY(0.99);
-        }
-
-        16% {
             transform: scaleY(1);
+        }
+
+        49% {
+            opacity: 1;
         }
 
         50% {
-            opacity: 1;
-        }
-
-        51% {
             opacity: 0;
         }
 
-        97% {
+        99% {
             opacity: 0;
-        }
-
-        98% {
-            opacity: 1;
-            transform: scaleY(1);
         }
 
         100% {
@@ -1295,7 +1477,59 @@
 
         100% {
             transform: scaleY(1);
+            opacity: 1;
+        }
+    }
+
+    @keyframes jiggle-partial-front-cream {
+        0% {
             opacity: 0;
+        }
+
+        46% {
+            opacity: 0;
+        }
+
+        47% {
+            opacity: 1;
+        }
+
+        49% {
+            transform: scaleY(1);
+        }
+
+        50% {
+            opacity: 1;
+            transform: scaleY(0.94);
+        }
+
+        53% {
+            transform: scaleY(0.99);
+        }
+
+        55% {
+            transform: scaleY(1.04);
+        }
+
+        58% {
+            transform: scaleY(1.01);
+        }
+
+        62% {
+            transform: scaleY(1);
+        }
+
+        97% {
+            transform: scaleY(1);
+        }
+
+        99% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 1;
+            transform: scaleY(1);
         }
     }
 
@@ -1371,27 +1605,19 @@
 
         55% {
             transform: translateX(0%) translateY(0%);
-            transform: scaleY(0.99);
+            transform: scaleY(0.94);
         }
 
         59% {
-            transform: scaleY(1.01);
+            transform: scaleY(1);
         }
 
-        62% {
-            transform: scaleY(0.99);
-        }
-
-        65% {
+        95% {
             transform: scaleY(1);
         }
 
         96% {
-            transform: translateX(0%) translateY(0%);
-        }
-
-        99% {
-            transform: translateX(-16%) translateY(-10%);
+            transform: scaleY(0.85) translateX(0%) translateY(0%);
         }
 
         100% {
@@ -1415,28 +1641,117 @@
         width: var(--size);
         color: var(--lb-cake-body);
     }
+
+    .leaves-complete {
+        height: var(--size);
+        width: var(--size);
+        animation: 4s infinite jiggle-complete;
+    }
+
+    .leaf-1 {
+        position: absolute;
+        top: 142px;
+        left: 185px;
+        transform: rotate(90deg);
+        transform-origin: 0px 0px;
+        width: 20px;
+        height: 15px;
+        border-radius: 100px 0px;
+        background: var(--bb-leaf);
+    }
+
+    .leaf-2 {
+        position: absolute;
+        top: 133px;
+        left: 36px;
+        transform: rotate(25deg);
+        width: 15px;
+        height: 20px;
+        border-radius: 100px 0px;
+        background: var(--bb-leaf);
+    }
+
+    .leaf-3 {
+        position: absolute;
+        top: 90px;
+        left: 10px;
+        transform: rotate(-45deg);
+        width: 10px;
+        height: 20px;
+        border-radius: 100px 0px;
+        background: var(--bb-leaf-dark);
+    }
+
+    .leaf-4 {
+        position: absolute;
+        top: 82px;
+        left: 163px;
+        transform: rotate(45deg);
+        width: 15px;
+        height: 20px;
+        border-radius: 100px 0px;
+        background: var(--bb-leaf-dark);
+    }
+
+    .leaf-5 {
+        position: absolute;
+        top: 120px;
+        left: 226px;
+        transform: rotate(15deg);
+        width: 15px;
+        height: 20px;
+        border-radius: 100px 0px;
+        background: var(--bb-leaf);
+    }
+
+    .leaf-6 {
+        position: absolute;
+        top: 116px;
+        left: -5px;
+        transform: rotate(-80deg);
+        width: 15px;
+        height: 20px;
+        border-radius: 100px 0px;
+        background: var(--bb-leaf);
+    }
     </style>
     <foreignObject width="100%" height="100%">
         <div class="canvas" xmlns="http://www.w3.org/1999/xhtml">
                     <div class="text">CSS is cool</div>
                     <div class="lbc">
                         <div class="lbc-complete"></div>
-                        <div class="lbc-cream"></div>
+                        <div class="lbc-cream">
+                            <div class="leaf-3"></div>
+                            <div class="leaf-4"></div>
+                            <div class="leaf-5"></div>
+                            <div class="leaf-6"></div>
+                            <div class="leaf-1"></div>
+                            <div class="leaf-2"></div>
+                        </div>
                     </div>
                     <div class="lbc-sliced">
                         <div class="lemon-blueberry-cake"></div>
-                        <div class="lbc-cream-back"></div>
+                        <div class="lbc-cream-back">
+                            <div class="leaf-4"></div>
+                        </div>
 
                         <div class="slice">
                             <div class="lemon-blueberry-cake-slice"></div>
                             <div class="lbc-cream-slice-cutoff">
-                                <div class="lbc-cream-front-2"></div>
+                                <div class="lbc-cream-front-2">
+                                    <div class="leaf-5"></div>
+                                    <div class="leaf-1"></div>
+                                </div>
                             </div>
                         </div>
 
                         <div class="lemon-blueberry-cake-front"></div>
                         <div class="lbc-cream-front-cutoff">
-                            <div class="lbc-cream-front"></div>
+                            <div class="lbc-cream-front">
+                                <div class="leaf-3"></div>
+                                <div class="leaf-6"></div>
+                                <div class="leaf-2"></div>
+                            </div>
                         </div>
 
                     </div>
