@@ -886,6 +886,9 @@
 
             radial-gradient(ellipse, var(--lb-cake-top) 60%, transparent 60.75%),
 
+            radial-gradient(ellipse, var(--lb-cake-top-mid) 60%, transparent 60.75%),
+            radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
+
             radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
             radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
             radial-gradient(ellipse, var(--lb-cake-top-shade) 60%, transparent 60.75%),
@@ -934,6 +937,9 @@
             11% 12%,
 
             90% 50%,
+        
+            8% 11%,
+            13% 20%,
 
             28% 45%,
             32% 25%,
@@ -982,6 +988,9 @@
             37% calc(51% + 48px),
 
             50% calc(100% + 48px),
+
+            99% calc(78% + 48px),
+            103% calc(82% + 48px),
 
             89% calc(101% + 48px),
             65% calc(67% + 48px),
