@@ -1418,10 +1418,15 @@
         }
 
         49% {
+            transform: scaleY(1);
+        }
+        
+        50% {
             opacity: 1;
+            transform: scaleY(0.94);
         }
 
-        50% {
+        51% {
             opacity: 0;
         }
 
