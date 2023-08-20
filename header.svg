@@ -16,12 +16,561 @@
         --bb-leaf: #79994c;
         --lb-plate: #d3ddd7;
         --lb-plate-shade: #abb7bb;
+
+        --sb-cake-body: #f6e8de;
+        --sb-cake-top: #e68b9c;
+        --sb-cake-top-shade: #dc7985;
+        --scheese-crumble: #967159;
+        --scheese1: #f0cdc8;
+        --scheese2: #e8aeae;
+        --scheese3: #df9197;
+        --scheese4: #dc7985;
+        --straw-red-flesh: #db3632;
+        --straw-red-flesh2: #c12d38;
+        --straw-red-skin: #b72d34;
+        --straw-pink: #d5726c;
+
+        --tm-cake-body: #f3e7d8;
+        --tm-cake-top: #a56751;
+        --tm-cake-top-shade: #b78e76;
+        --tm-cake-top-light: #e5d5be;
+        --tm-cake-top-mid: #f3e7d8;
+        --choc-mousse: #492d23;
+        --crumble: #714c38;
     }
 
     .canvas {
         width: 100%;
         height: 100%;
         background-color: transparent;
+    }
+
+    .tm {
+        opacity: 1;
+    }
+
+    .tm-sliced {
+        opacity: 1;
+    }
+
+    .tm-complete {
+        top: 0px;
+        position: absolute;
+        width: var(--size);
+        height: var(--size);
+        background: no-repeat;
+        background-image:
+            radial-gradient(ellipse, var(--lb-plate) 60%, transparent 60.75%),
+            radial-gradient(ellipse, var(--lb-plate-shade) 60%, transparent 60.75%);
+        background-size:
+            26em 14em,
+            26em 14.5em;
+        background-position:
+            50% 95%,
+            50% 99%;
+    }
+
+    .tm-complete::after {
+        content: "";
+        position: relative;
+        display: inherit;
+        width: 16em;
+        height: 8em;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-image:
+            linear-gradient(var(--tm-cake-top), var(--tm-cake-top));
+        background-size:
+            100% 100%;
+        background-position:
+            0% 0%;
+        border-radius: 50%;
+        left: 4.5em;
+        top: -6em;
+        animation: 4s infinite jiggle-complete;
+        transform-origin: 0% 256px;
+    }
+
+    .tm-complete::before {
+        content: "";
+        position: relative;
+        display: inherit;
+        width: 16em;
+        animation: 4s infinite jiggle-complete;
+        transform-origin: 0% 12em;
+        height: 12em;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-image:
+            radial-gradient(ellipse, var(--tm-cake-top-shade) 70%, transparent 72%),
+            radial-gradient(ellipse, var(--tm-cake-body) 70%, transparent 71%),
+            linear-gradient(var(--tm-cake-body), var(--tm-cake-body)),
+            linear-gradient(var(--tm-cake-body) 35%, var(--crumble) 35%),
+            linear-gradient(var(--tm-cake-body), var(--tm-cake-body));
+        background-size:
+            100% 65%,
+            101% 77%,
+            35% 35%,
+            100% 70%,
+            30% 40%;
+        background-position:
+            0% -63%,
+            30% 69%,
+            0% 12%,
+            0% 100%,
+            100% 12%;
+        border-bottom-left-radius: 10em 5em;
+        border-bottom-right-radius: 10em 5em;
+        left: 4.5em;
+        top: 9em;
+    }
+
+    .tm-cake {
+        top: 0px;
+        position: absolute;
+        width: var(--size);
+        height: var(--size);
+        background: no-repeat;
+    }
+
+    .tm-cake::after {
+        animation: 4s infinite jiggle-partial;
+        transform-origin: 0% 189px;
+        content: "";
+        position: relative;
+        display: inherit;
+        width: 16em;
+        height: 8em;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-image:
+            linear-gradient(var(--tm-cake-top), var(--tm-cake-top));
+        background-size:
+            100% 50%;
+        background-position:
+            0% 0%;
+        border-radius: 50%;
+        left: 4.5em;
+        top: -6em;
+    }
+
+    .tm-cake::before {
+        animation: 4s infinite jiggle-partial;
+        transform-origin: 0% 125px;
+        content: "";
+        position: relative;
+        display: inherit;
+        width: 16em;
+        height: 12em;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-image:
+            linear-gradient(var(--tm-cake-top), var(--tm-cake-top)),
+            linear-gradient(var(--tm-cake-top-shade) 50%, transparent),
+            linear-gradient(var(--tm-cake-top-light), var(--tm-cake-top-light)),
+            linear-gradient(to bottom, transparent,
+                transparent 0.3em,
+                var(--tm-cake-top-light) 0.3em,
+                var(--tm-cake-top-light) 2.1em,
+                var(--crumble) 2.2em,
+                var(--crumble) 3.6em,
+                var(--choc-mousse) 3.7em,
+                var(--choc-mousse) 5.2em,
+                var(--tm-cake-top-light) 5.3em,
+                var(--tm-cake-top-light) 6.1em,
+                var(--crumble) 6.1em);
+        background-size:
+            53% 40%,
+            50% 2%,
+            10% 40%,
+            60% 61%;
+        background-position:
+            2% 7%,
+            100% 8%,
+            100% 15%,
+            100% 16%;
+        border-bottom-left-radius: 10em 5em;
+        border-bottom-right-radius: 10em 5em;
+        left: 4.5em;
+        top: 9em;
+    }
+
+    .tm-cake-slice {
+        top: 40px;
+        left: 65px;
+        position: absolute;
+        width: var(--size);
+        height: var(--size);
+        background: no-repeat;
+    }
+
+    .tm-cake-slice::before {
+        content: "";
+        position: absolute;
+        display: inherit;
+        width: 16em;
+        height: 12em;
+        border-bottom-left-radius: 10em 5em;
+        border-bottom-right-radius: 10em 5em;
+        left: 4.5em;
+        top: 9em;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-image:
+            linear-gradient(var(--crumble), var(--crumble)),
+            linear-gradient(var(--tm-cake-top-shade) 32.5%, var(--tm-cake-top-light) 34.5%, var(--tm-cake-top-light) 87%, var(--crumble) 87%),
+            linear-gradient(55deg, transparent, transparent 2.6em, var(--tm-cake-top-shade) 2.7em, var(--tm-cake-top-shade)),
+            linear-gradient(55deg, transparent, transparent 1.8em, var(--tm-cake-top-light) 1.8em, var(--tm-cake-top-light)),
+            linear-gradient(55deg, transparent,
+                                    transparent 2.4em,
+                                    var(--crumble) 2.5em,
+                                    var(--crumble) 3em,
+                                    var(--tm-cake-top-light) 3.1em,
+                                    var(--tm-cake-top-light) 3.6em,
+                                    var(--choc-mousse) 3.7em,
+                                    var(--choc-mousse) 4.4em,
+                                    var(--crumble) 4.4em,
+                                    var(--crumble) 5.2em,
+                                    var(--tm-cake-top-light) 5.3em,
+                                    var(--tm-cake-top-light));
+        background-size:
+            29% 40%,
+            30% 90%,
+            30% 37.5%,
+            35% 80%,
+            30% 92%;
+        background-position:
+            100% 95%,
+            100% 100%,
+            75% 13.5%,
+            99% 90%,
+            76% 104%;
+    }
+
+    .tm-cake-slice::after {
+        content: "";
+        position: absolute;
+        display: inherit;
+        width: 16em;
+        height: 8em;
+        border-radius: 50%;
+        left: 4.5em;
+        top: 6em;
+        background-repeat: no-repeat;
+        background-image:
+            linear-gradient(55deg, transparent 60%, var(--tm-cake-top) 60.75%);
+        background-size:
+            100% 50%;
+        background-position:
+            0% 100%;
+    }
+
+    .tm-cake-slice2 {
+        top: 40px;
+        left: 65px;
+        position: absolute;
+        width: var(--size);
+        height: var(--size);
+        background: no-repeat;
+    }
+
+    .tm-cake-slice2::before {
+        content: "";
+        position: absolute;
+        display: inherit;
+        width: 4.75em;
+        height: 10.2em;
+        border-bottom-right-radius: 90px 70px;
+        border-bottom-left-radius: 1px;
+        left: 15.75em;
+        top: 10.1em;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-image:
+            radial-gradient(ellipse, var(--tm-cake-top) 70%, transparent 70.75%),
+            radial-gradient(ellipse, var(--tm-cake-top-shade) 70%, transparent 72%),
+            radial-gradient(ellipse, var(--tm-cake-body) 70%, transparent 71%),
+            linear-gradient(var(--tm-cake-body) 58%, var(--crumble) 58%),
+            linear-gradient(55deg, transparent, transparent 2.6em, var(--tm-cake-top-shade) 2.7em, var(--tm-cake-top-shade)),
+            linear-gradient(55deg, transparent, transparent 1.8em, var(--tm-cake-top-light) 1.8em, var(--tm-cake-top-light));
+        background-size:
+            250% 115%,
+            250% 115%,
+            300% 87%,
+            100% 100%,
+            30% 90%,
+            30% 40%,
+            30% 80%;
+        background-position:
+            92% 528%,
+            91% 521%,
+            99% 72%,
+            0% 100%,
+            100% 100%,
+            76% 14%,
+            92% 90%;
+    }
+
+    .tm-cake-front {
+        animation: 4s infinite jiggle-partial-front;
+        transform-origin: 0% 335px;
+        top: 0px;
+        position: absolute;
+        width: var(--size);
+        height: var(--size);
+        background: no-repeat;
+    }
+
+    .tm-cake-front::after {
+        content: "";
+        position: relative;
+        display: inherit;
+        width: 16em;
+        height: 8em;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-image:
+            linear-gradient(55deg, var(--tm-cake-top) 60%, transparent 60.75%),
+            linear-gradient(55deg, var(--tm-cake-top) 60%, transparent 60.75%);
+        background-size:
+            100% 50%,
+            97% 55%;
+        background-position:
+            0% 100%,
+            0% 100%;
+        border-radius: 50%;
+        left: 4.5em;
+        top: -6em;
+    }
+
+    .tm-cake-front::before {
+        content: "";
+        position: relative;
+        display: inherit;
+        width: 16em;
+        height: 12em;
+        -webkit-mask:
+            conic-gradient(from 90deg at 69.5% 39.5%, transparent, transparent 25%, var(--tm-cake-body) 25%, var(--tm-cake-body) 65%, transparent 65%);
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-image:
+            radial-gradient(ellipse, var(--tm-cake-top) 70%, transparent 70.75%),
+            radial-gradient(ellipse, var(--tm-cake-top-shade) 70%, transparent 72%),
+            radial-gradient(ellipse, var(--tm-cake-body) 70%, transparent 71%),
+            linear-gradient(var(--tm-cake-body) 31%, var(--crumble) 31%),
+            linear-gradient(var(--tm-cake-body), var(--tm-cake-body));
+        background-size:
+            100% 60%,
+            100% 65%,
+            101% 77%,
+            69.5% 61%,
+            30% 40%;
+        background-position:
+            0% -56%,
+            0% -63%,
+            30% 69%,
+            0% 100%,
+            0% 15%;
+        border-bottom-left-radius: 10em 5em;
+        border-bottom-right-radius: 10em 5em;
+        left: 4.5em;
+        top: 9em;
+    }
+
+    @keyframes jiggle-complete {
+        0% {
+            transform: scaleY(1.03);
+            opacity: 1;
+        }
+
+        2% {
+            transform: scaleY(1.02);
+        }
+
+        5% {
+            transform: scaleY(0.98);
+        }
+
+        9% {
+            transform: scaleY(1);
+        }
+
+        49% {
+            transform: scaleY(1);
+        }
+
+        50% {
+            opacity: 1;
+            transform: scaleY(0.94);
+        }
+
+        51% {
+            opacity: 0;
+        }
+
+        99% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+            transform: scaleY(1);
+        }
+    }
+
+
+    @keyframes jiggle-partial {
+        0% {
+            opacity: 0;
+        }
+
+        49% {
+            opacity: 0;
+            transform: scaleY(1);
+        }
+
+        50% {
+            opacity: 1;
+            transform: scaleY(0.94);
+        }
+
+        53% {
+            transform: scaleY(0.99);
+        }
+
+        55% {
+            transform: scaleY(1.04);
+        }
+
+        58% {
+            transform: scaleY(1.01);
+        }
+
+        62% {
+            transform: scaleY(1);
+        }
+
+        97% {
+            transform: scaleY(1);
+        }
+
+        99% {
+            opacity: 1;
+        }
+
+        100% {
+            transform: scaleY(1);
+            opacity: 1;
+        }
+    }
+
+    @keyframes jiggle-partial-front {
+        0% {
+            opacity: 0;
+        }
+
+        47% {
+            opacity: 0;
+        }
+
+        48% {
+            opacity: 1;
+        }
+
+        49% {
+            transform: scaleY(1);
+        }
+
+        50% {
+            opacity: 1;
+            transform: scaleY(0.94);
+        }
+
+        53% {
+            transform: scaleY(0.99);
+        }
+
+        55% {
+            transform: scaleY(1.04);
+        }
+
+        58% {
+            transform: scaleY(1.01);
+        }
+
+        62% {
+            transform: scaleY(1);
+        }
+
+        97% {
+            transform: scaleY(1);
+        }
+
+        99% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 1;
+            transform: scaleY(1);
+        }
+    }
+
+    @keyframes tm-slide {
+        0% {
+            opacity: 0;
+            transform: translateX(-16%) translateY(-10%);
+        }
+
+        48% {
+            opacity: 0;
+        }
+
+        49% {
+            opacity: 1;
+        }
+
+        50% {
+            transform: translateX(-16%) translateY(-10%);
+        }
+
+        55% {
+            transform: translateX(0%) translateY(0%);
+            transform: scaleY(0.94);
+        }
+
+        59% {
+            transform: scaleY(1);
+        }
+
+        95% {
+            transform: scaleY(1);
+        }
+
+        96% {
+            transform: scaleY(0.85) translateX(0%) translateY(0%);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateX(-16%) translateY(-10%);
+        }
+    }
+
+    .tm-slice {
+        height: var(--size);
+        width: var(--size);
+        animation: 4s infinite tm-slide;
+        transform-origin: 220px 400px;
+    }
+
+    .tm-text {
+        position: absolute;
+        font-family: 'Courier New', monospace;
+        font-size: 3em;
+        text-align: center;
+        width: var(--size);
+        color: var(--tm-cake-top);
     }
 
     .lbc {
@@ -1650,7 +2199,7 @@
         transform-origin: 220px 400px;
     }
 
-    .text {
+    .lb-text {
         position: absolute;
         font-family: 'Courier New', monospace;
         font-size: 3em;
@@ -1731,47 +2280,1084 @@
         border-radius: 100px 0px;
         background: var(--bb-leaf);
     }
+
+    .scheese-sliced {
+        opacity: 1;
+    }
+
+    .strawberries-complete {
+        animation: 4s infinite jiggle-complete;
+        transform-origin: 0% 256px;
+    }
+
+    .scheese-complete {
+        top: 0px;
+        position: absolute;
+        width: var(--size);
+        height: var(--size);
+        background: no-repeat;
+        background-image:
+            radial-gradient(ellipse, var(--lb-plate) 60%, transparent 60.75%),
+            radial-gradient(ellipse, var(--lb-plate-shade) 60%, transparent 60.75%);
+        background-size:
+            26em 14em,
+            26em 14.5em;
+        background-position:
+            50% 95%,
+            50% 99%;
+    }
+
+    .scheese-complete::after {
+        content: "";
+        position: relative;
+        display: inherit;
+        width: 16em;
+        height: 8em;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-image:
+            linear-gradient(var(--sb-cake-top), var(--sb-cake-top));
+        background-size:
+            100% 100%;
+        background-position:
+            0% 0%;
+        border-radius: 50%;
+        left: 4.5em;
+        top: -5em;
+        animation: 4s infinite jiggle-complete;
+        transform-origin: 0% 256px;
+    }
+
+    .scheese-complete::before {
+        content: "";
+        position: relative;
+        display: inherit;
+        width: 16em;
+        animation: 4s infinite jiggle-complete;
+        transform-origin: 0% 12em;
+        height: 12em;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-image:
+            radial-gradient(ellipse, var(--scheese4) 60%, transparent 60.75%),
+            radial-gradient(ellipse, var(--scheese3) 60%, transparent 60.75%),
+            radial-gradient(ellipse, var(--scheese2) 60%, transparent 60.75%),
+            radial-gradient(ellipse, var(--scheese1) 60%, transparent 60.75%),
+            radial-gradient(ellipse, var(--sb-cake-body) 60%, transparent 60.75%),
+            linear-gradient(var(--sb-cake-body), var(--sb-cake-body)),
+            linear-gradient(var(--sb-cake-body) 40%, var(--scheese-crumble) 40%),
+            linear-gradient(var(--sb-cake-body), var(--sb-cake-body));
+        background-size:
+            118% 85%,
+            118% 85%,
+            118% 85%,
+            118% 85%,
+            118% 85%,
+            35% 35%,
+            100% 70%,
+            30% 40%;
+        background-position:
+            50% -132%,
+            50% -70%,
+            50% -5%,
+            50% 60%,
+            50% 110%,
+            0% 25%,
+            0% 100%,
+            100% 25%;
+        border-bottom-left-radius: 10em 5em;
+        border-bottom-right-radius: 10em 5em;
+        left: 4.5em;
+        top: 9em;
+    }
+
+    .scheese-cake {
+        top: 0px;
+        position: absolute;
+        width: var(--size);
+        height: var(--size);
+        background: no-repeat;
+    }
+
+    .scheese-cake::after {
+        animation: 4s infinite jiggle-partial;
+        transform-origin: 0% 182px;
+        content: "";
+        position: relative;
+        display: inherit;
+        width: 16em;
+        height: 8em;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-image:
+            linear-gradient(var(--sb-cake-top), var(--sb-cake-top)),
+            linear-gradient(var(--scheese4), var(--scheese4));
+        background-size:
+            100% 50%,
+            100% 30%;
+        background-position:
+            0% 0%,
+            55% 40%;
+        border-radius: 50%;
+        left: 4.5em;
+        top: -5em;
+    }
+
+    .scheese-cake::before {
+        animation: 4s infinite jiggle-partial;
+        transform-origin: 0% 155px;
+        content: "";
+        position: relative;
+        display: inherit;
+        width: 16em;
+        height: 12em;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-image:
+            linear-gradient(var(--sb-cake-top), var(--sb-cake-top)),
+            repeating-linear-gradient(to bottom,
+                var(--scheese4),
+                var(--scheese4) 1.2em,
+                var(--scheese3) 1.2em,
+                var(--scheese3) 2.3em,
+                var(--scheese2) 2.3em,
+                var(--scheese2) 3.4em,
+                var(--scheese1) 3.4em,
+                var(--scheese1) 4.5em,
+                var(--sb-cake-body) 4.5em,
+                var(--sb-cake-body) 5.4em,
+                var(--scheese-crumble) 5.5em,
+                var(--scheese-crumble) 6em);
+        background-size:
+            52% 30%,
+            60% 50%;
+        background-position:
+            1% 20%,
+            100% 33%;
+        border-bottom-left-radius: 10em 5em;
+        border-bottom-right-radius: 10em 5em;
+        left: 4.5em;
+        top: 9em;
+    }
+
+    .scheese-cake-slice {
+        top: 40px;
+        left: 65px;
+        position: absolute;
+        width: var(--size);
+        height: var(--size);
+        background: no-repeat;
+    }
+
+    .scheese-cake-slice::before {
+        content: "";
+        position: absolute;
+        display: inherit;
+        width: 16em;
+        height: 11em;
+        border-bottom-left-radius: 10em 5em;
+        border-bottom-right-radius: 10em 5em;
+        left: 4.5em;
+        top: 10.1em;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-image:
+            linear-gradient(var(--scheese-crumble), var(--scheese-crumble)),
+            linear-gradient(var(--sb-cake-top-shade) 32.5%,
+                                    var(--scheese4) 34.5%,
+                                    var(--scheese4) 47%,
+                                    var(--scheese3) 47%,
+                                    var(--scheese3) 58%,
+                                    var(--scheese2) 58%,
+                                    var(--scheese2) 69%,
+                                    var(--scheese1) 70%,
+                                    var(--scheese1) 81%,
+                                    var(--sb-cake-body) 81%,
+                                    var(--sb-cake-body) 90%,
+                                    var(--scheese-crumble) 91%),
+            linear-gradient(55deg, transparent, transparent 2.6em, var(--sb-cake-top-shade) 2.7em, var(--sb-cake-top-shade)),
+            linear-gradient(55deg, transparent,
+                                    transparent 2.4em,
+                                    var(--scheese-crumble) 2.4em,
+                                    var(--scheese-crumble) 2.7em,
+                                    var(--sb-cake-body) 2.8em,
+                                    var(--sb-cake-body) 3.3em,
+                                    var(--scheese1) 3.3em,
+                                    var(--scheese1) 3.9em,
+                                    var(--scheese2) 3.9em,
+                                    var(--scheese2) 4.5em,
+                                    var(--scheese3) 4.6em,
+                                    var(--scheese3) 5.2em,
+                                    var(--scheese4) 5.3em,
+                                    var(--scheese4));
+        background-size:
+            29% 40%,
+            30% 90%,
+            30% 37.5%,
+            30% 92%;
+        background-position:
+            100% 95%,
+            100% 100%,
+            75% 13.5%,
+            76% 104%;
+    }
+
+    .scheese-cake-slice::after {
+        content: "";
+        position: absolute;
+        display: inherit;
+        width: 16em;
+        height: 8em;
+        border-radius: 50%;
+        left: 4.5em;
+        top: 7em;
+        background-repeat: no-repeat;
+        background-image:
+            linear-gradient(55deg, transparent 60%, var(--sb-cake-top) 60.75%);
+        background-size:
+            100% 50%;
+        background-position:
+            0% 100%;
+    }
+
+    .scheese-cake-slice2 {
+        top: 40px;
+        left: 65px;
+        position: absolute;
+        width: var(--size);
+        height: var(--size);
+        background: no-repeat;
+    }
+
+    .scheese-cake-slice2::before {
+        content: "";
+        position: absolute;
+        display: inherit;
+        width: 4.75em;
+        height: 9.4em;
+        border-bottom-right-radius: 90px 70px;
+        left: 15.75em;
+        top: 11em;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-image:
+            radial-gradient(ellipse, var(--sb-cake-top) 70%, transparent 71%),
+            radial-gradient(ellipse, var(--scheese4) 70%, transparent 71%),
+            radial-gradient(ellipse, var(--scheese3) 70%, transparent 71%),
+            radial-gradient(ellipse, var(--scheese2) 70%, transparent 71%),
+            radial-gradient(ellipse, var(--scheese1) 70%, transparent 71%),
+            radial-gradient(ellipse, var(--sb-cake-body) 70%, transparent 71%),
+            linear-gradient(var(--sb-cake-body) 40%, var(--scheese-crumble) 40%);
+        background-size:
+            300% 98%,
+            300% 98%,
+            300% 98%,
+            300% 98%,
+            300% 98%,
+            300% 98%,
+            30% 90%;
+        background-position:
+            99% -2800%,
+            98% -2200%,
+            98% -1600%,
+            97% -1000%,
+            97% -400%,
+            97% 100%,
+            100% 100%;
+    }
+
+    .scheese-cake-front {
+        animation: 4s infinite jiggle-partial-front;
+        transform-origin: 0% 335px;
+        top: 0px;
+        position: absolute;
+        width: var(--size);
+        height: var(--size);
+        background: no-repeat;
+    }
+
+    .scheese-cake-front::after {
+        content: "";
+        position: relative;
+        display: inherit;
+        width: 16em;
+        height: 8em;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-image:
+            linear-gradient(55deg, var(--sb-cake-top) 60%, transparent 60.75%),
+            linear-gradient(55deg, var(--sb-cake-top) 60%, transparent 60.75%);
+        background-size:
+            100% 50%,
+            98% 55%;
+        background-position:
+            0% 100%,
+            0% 100%;
+        border-radius: 50%;
+        left: 4.5em;
+        top: -5em;
+    }
+
+    .scheese-cake-front::before {
+        content: "";
+        position: relative;
+        display: inherit;
+        width: 16em;
+        height: 12em;
+        -webkit-mask:
+        conic-gradient(from 90deg at 70% 48%, transparent, transparent 25%, var(--sb-cake-body) 25%, var(--sb-cake-body) 65%, transparent 65%);
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-image:
+            radial-gradient(ellipse, var(--sb-cake-top) 60%, transparent 60.75%),
+            radial-gradient(ellipse, var(--scheese4) 60%, transparent 60.75%),
+            radial-gradient(ellipse, var(--scheese3) 60%, transparent 60.75%),
+            radial-gradient(ellipse, var(--scheese2) 60%, transparent 60.75%),
+            radial-gradient(ellipse, var(--scheese1) 60%, transparent 60.75%),
+            radial-gradient(ellipse, var(--sb-cake-body) 60%, transparent 60.75%),
+            linear-gradient(var(--sb-cake-body) 25%, var(--scheese-crumble) 25%),
+            linear-gradient(var(--sb-cake-body), var(--sb-cake-body));
+        background-size:
+            60% 35%,
+            118% 85%,
+            118% 85%,
+            118% 85%,
+            118% 85%,
+            118% 85%,
+            69.5% 53%,
+            30% 40%;
+        background-position:
+            -8% -10%,
+            50% -132%,
+            50% -70%,
+            50% -5%,
+            50% 60%,
+            50% 110%,
+            0% 100%,
+            0% 30%;
+        border-bottom-left-radius: 10em 5em;
+        border-bottom-right-radius: 10em 5em;
+        left: 4.5em;
+        top: 9em;
+    }
+
+    @keyframes jiggle-complete {
+        0% {
+            transform: scaleY(1.03);
+            opacity: 1;
+        }
+
+        2% {
+            transform: scaleY(1.02);
+        }
+
+        5% {
+            transform: scaleY(0.98);
+        }
+
+        9% {
+            transform: scaleY(1);
+        }
+
+        49% {
+            transform: scaleY(1);
+        }
+
+        50% {
+            opacity: 1;
+            transform: scaleY(0.94);
+        }
+
+        51% {
+            opacity: 0;
+        }
+
+        99% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+            transform: scaleY(1);
+        }
+    }
+
+
+    @keyframes jiggle-partial {
+        0% {
+            opacity: 0;
+        }
+
+        49% {
+            opacity: 0;
+            transform: scaleY(1);
+        }
+
+        50% {
+            opacity: 1;
+            transform: scaleY(0.94);
+        }
+
+        53% {
+            transform: scaleY(0.99);
+        }
+
+        55% {
+            transform: scaleY(1.04);
+        }
+
+        58% {
+            transform: scaleY(1.01);
+        }
+
+        62% {
+            transform: scaleY(1);
+        }
+
+        97% {
+            transform: scaleY(1);
+        }
+
+        99% {
+            opacity: 1;
+        }
+
+        100% {
+            transform: scaleY(1);
+            opacity: 1;
+        }
+    }
+
+    @keyframes jiggle-partial-front {
+        0% {
+            opacity: 0;
+        }
+
+        47% {
+            opacity: 0;
+        }
+
+        48% {
+            opacity: 1;
+        }
+
+        49% {
+            transform: scaleY(1);
+        }
+
+        50% {
+            opacity: 1;
+            transform: scaleY(0.94);
+        }
+
+        53% {
+            transform: scaleY(0.99);
+        }
+
+        55% {
+            transform: scaleY(1.04);
+        }
+
+        58% {
+            transform: scaleY(1.01);
+        }
+
+        62% {
+            transform: scaleY(1);
+        }
+
+        97% {
+            transform: scaleY(1);
+        }
+
+        99% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 1;
+            transform: scaleY(1);
+        }
+    }
+
+    @keyframes sb-slide {
+        0% {
+            opacity: 0;
+            transform: translateX(-16%) translateY(-10%);
+        }
+
+        48% {
+            opacity: 0;
+        }
+
+        49% {
+            opacity: 1;
+        }
+
+        50% {
+            transform: translateX(-16%) translateY(-10%);
+        }
+
+        55% {
+            transform: translateX(0%) translateY(0%);
+            transform: scaleY(0.94);
+        }
+
+        59% {
+            transform: scaleY(1);
+        }
+
+        95% {
+            transform: scaleY(1);
+        }
+
+        96% {
+            transform: scaleY(0.85) translateX(0%) translateY(0%);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateX(-16%) translateY(-10%);
+        }
+    }
+
+    @keyframes slide-topping {
+        0% {
+            opacity: 0;
+            transform: translateX(-16%) translateY(-10%);
+        }
+
+        45% {
+            opacity: 0;
+        }
+
+        46% {
+            opacity: 1;
+        }
+
+        50% {
+            transform: translateX(-16%) translateY(-10%);
+        }
+
+        55% {
+            transform: translateX(0%) translateY(0%);
+            transform: scaleY(0.94);
+        }
+
+        59% {
+            transform: scaleY(1);
+        }
+
+        95% {
+            transform: scaleY(1);
+        }
+
+        96% {
+            transform: scaleY(0.85) translateX(0%) translateY(0%);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateX(-16%) translateY(-10%);
+        }
+    }
+
+    .sb-slice {
+        height: var(--size);
+        width: var(--size);
+        animation: 4s infinite sb-slide;
+        transform-origin: 220px 400px;
+    }
+
+    .sb-text {
+        position: absolute;
+        font-family: 'Courier New', monospace;
+        font-size: 3em;
+        text-align: center;
+        width: var(--size);
+        color: var(--sb-cake-top);
+    }
+
+    .element {
+        position: absolute;
+        animation: 4s infinite jiggle-complete;
+        transform-origin: 0% 400px;
+        z-index: 1;
+    }
+
+    .element-slice {
+        position: absolute;
+        z-index: 2;
+        animation: 4s infinite slide-topping;
+        transform-origin: 0px 400px;
+        top: 0px;
+    }
+
+    @keyframes jiggle-partial-topping {
+        0% {
+            opacity: 0;
+        }
+
+        46% {
+            opacity: 0;
+        }
+
+        47% {
+            opacity: 1;
+            transform: scaleY(1);
+        }
+
+        49% {
+            opacity: 1;
+            transform: scaleY(1);
+        }
+
+        50% {
+            opacity: 1;
+            transform: scaleY(0.94);
+        }
+
+        53% {
+            transform: scaleY(0.99);
+        }
+
+        55% {
+            transform: scaleY(1.04);
+        }
+
+        58% {
+            transform: scaleY(1.01);
+        }
+
+        62% {
+            transform: scaleY(1);
+        }
+
+        97% {
+            transform: scaleY(1);
+        }
+
+        99% {
+            opacity: 1;
+        }
+
+        100% {
+            transform: scaleY(1);
+            opacity: 1;
+        }
+    }
+
+    .element-back {
+        position: absolute;
+        animation: 4s infinite jiggle-partial-topping;
+        transform-origin: 0% 300px;
+        top: 0px;
+        z-index: 1;
+    }
+
+    @keyframes jiggle-partial-front-topping {
+        0% {
+            opacity: 0;
+        }
+
+        45% {
+            opacity: 0;
+        }
+
+        46% {
+            opacity: 1;
+        }
+
+        49% {
+            transform: scaleY(1);
+        }
+
+        50% {
+            opacity: 1;
+            transform: scaleY(0.94);
+        }
+
+        53% {
+            transform: scaleY(0.99);
+        }
+
+        55% {
+            transform: scaleY(1.04);
+        }
+
+        58% {
+            transform: scaleY(1.01);
+        }
+
+        62% {
+            transform: scaleY(1);
+        }
+
+        97% {
+            transform: scaleY(1);
+        }
+
+        99% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 1;
+            transform: scaleY(1);
+        }
+    }
+
+    .element-front {
+        position: absolute;
+        z-index: 3;
+        animation: 4s infinite jiggle-partial-front-topping;
+        transform-origin: 0% 335px;
+        top: 0px;
+    }
+
+    @keyframes lb-hide {
+        0% {
+            opacity: 1;
+        }
+
+        33% {
+            opacity: 1;
+        }
+
+        34% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 0;
+        }
+    }
+
+    @keyframes sb-hide {
+        0% {
+            opacity: 1;
+        }
+
+        1% {
+            opacity: 0;
+        }
+
+        66% {
+            opacity: 0;
+        }
+
+        67% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @keyframes tm-hide {
+        0% {
+            opacity: 0;
+        }
+
+        33% {
+            opacity: 0;
+        }
+
+        34% {
+            opacity: 1;
+        }
+
+        66% {
+            opacity: 1;
+        }
+
+        67% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 0;
+        }
+    }
+
+    .lb-hider {
+        opacity: 0;
+        position: absolute;
+        animation: 12s infinite lb-hide;
+    }
+
+    .sb-hider {
+        opacity: 0;
+        position: absolute;
+        animation: 12s infinite sb-hide;
+    }
+
+    .tm-hider {
+        opacity: 0;
+        position: absolute;
+        animation: 12s infinite tm-hide;
+    }
     </style>
     <foreignObject width="100%" height="100%">
-        <div class="canvas" xmlns="http://www.w3.org/1999/xhtml">
-                    <div class="text">CSS is cool</div>
-                    <div class="lbc">
-                        <div class="lbc-complete"></div>
-                        <div class="lbc-cream">
-                            <div class="leaf-3"></div>
-                            <div class="leaf-4"></div>
-                            <div class="leaf-5"></div>
-                            <div class="leaf-6"></div>
-                            <div class="leaf-1"></div>
-                            <div class="leaf-2"></div>
-                        </div>
-                    </div>
-                    <div class="lbc-sliced">
-                        <div class="lemon-blueberry-cake"></div>
-                        <div class="lbc-cream-back">
-                            <div class="leaf-4"></div>
-                        </div>
-
-                        <div class="slice">
-                            <div class="lemon-blueberry-cake-slice"></div>
-                            <div class="lbc-cream-slice-cutoff">
-                                <div class="lbc-cream-front-2">
-                                    <div class="leaf-5"></div>
-                                    <div class="leaf-1"></div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="lemon-blueberry-cake-front"></div>
-                        <div class="lbc-cream-front-cutoff">
-                            <div class="lbc-cream-front">
+                <div class="canvas" xmlns="http://www.w3.org/1999/xhtml">
+                    <div class="lb-hider">
+                        <div class="lb-text">CSS is cool</div>
+                        <div class="lbc">
+                            <div class="lbc-complete"></div>
+                            <div class="lbc-cream">
                                 <div class="leaf-3"></div>
+                                <div class="leaf-4"></div>
+                                <div class="leaf-5"></div>
                                 <div class="leaf-6"></div>
+                                <div class="leaf-1"></div>
                                 <div class="leaf-2"></div>
                             </div>
                         </div>
+                        <div class="lbc-sliced">
+                            <div class="lemon-blueberry-cake"></div>
+                            <div class="lbc-cream-back">
+                                <div class="leaf-4"></div>
+                            </div>
 
+                            <div class="slice">
+                                <div class="lemon-blueberry-cake-slice"></div>
+                                <div class="lbc-cream-slice-cutoff">
+                                    <div class="lbc-cream-front-2">
+                                        <div class="leaf-5"></div>
+                                        <div class="leaf-1"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="lemon-blueberry-cake-front"></div>
+                            <div class="lbc-cream-front-cutoff">
+                                <div class="lbc-cream-front">
+                                    <div class="leaf-3"></div>
+                                    <div class="leaf-6"></div>
+                                    <div class="leaf-2"></div>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
+
+                    <div class="tm-hider">
+                        <div class="tm-text">CSS is cool</div>
+                        <div class="tm">
+                            <div class="tm-complete"></div>
+                        </div>
+                        <div class="tm-sliced">
+                            <div class="tm-cake"></div>
+
+                            <div class="tm-slice">
+                                <div class="tm-cake-slice"></div>
+                                <div class="tm-cake-slice2"></div>
+                            </div>
+
+                            <div class="tm-cake-front"></div>
+
+                        </div>
+                    </div>
+
+                    <div class="sb-hider">
+                        <div class="sb-text">CSS is cool</div>
+                        <div class="scheese">
+                            <div class="scheese-complete"></div>
+                            <svg class="element" width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M155.5 118C157.425 113.589 159.351 111.236 166 107.5L178 119.5L188 118L192.5 112L199 99C205.509 100.03 207.771 101.013 211 103V114L206 125.5L169.5 128L155.5 118Z" fill="#E8AEAE"/>
+                                <path d="M180 112L188 104.5H192L198 116.5L185.5 122.5L180 112Z" fill="#B72D34"/>
+                                <path d="M166.5 120L175.5 109L185 110L187.5 120L195.5 122.5V135.5L184 137L179.5 127.5L166.5 120Z" fill="#D5726C"/>
+                                <path d="M215 105L225.5 102L236.5 115.5L230 135H217.5L216 127L201.5 126V112.5L215 110.5V105Z" fill="#D5726C"/>
+                                <path d="M199 105C206.366 114.494 208.469 120.586 209.5 129.5C215.313 117.007 211.772 111.274 199 105Z" fill="#4F632C"/>
+                                <path d="M219.5 120.5H228.5V118L222.5 116H214L209 130H217L216 126.5L219.5 120.5Z" fill="#F0CDC8"/>
+                                <path d="M199 123L206.5 121.5C209.906 124.642 210.837 126.655 211.5 130.5L209.5 133H200L199 123Z" fill="#B72D34"/>
+                                <path d="M184 127.696L140.515 104.897L135.426 102.105C133.267 101.33 130.8 104.804 132.651 113.738C134.501 122.671 140.515 131.884 146.066 136.072C151.618 140.259 163.183 141.655 168.271 140.724C178.109 138.925 184 134.676 184 127.696Z" fill="#B72D34" stroke="#B72D34"/>
+                                <path d="M297.184 125.101C282.53 125.881 279.745 128.767 283.217 137.718C289.667 134.144 292.834 131.531 297.184 125.101Z" fill="#4F632C"/>
+                                <path d="M261.026 109.218C266.152 115.038 269.795 118.675 269.191 126.492C270.076 136.636 257.046 141.937 249.089 143.384C243.768 143.994 239.457 144.298 235.453 141.863C231.586 139.511 229.673 137.403 227.93 133.314C225.092 126.657 227.526 103.946 230.684 94.5757C233.389 90.5579 235.372 90.2538 239.566 92.4473C250.112 98.7275 254.679 102.416 261.026 109.218Z" fill="#B72D34"/>
+                                <path d="M249.089 143.384C234.158 145.095 229.066 133.502 227.157 120.912C227.39 111.06 228.151 105.298 230.684 94.5757M249.089 143.384C257.046 141.937 270.076 136.636 269.191 126.492C269.795 118.675 266.152 115.038 261.026 109.218C254.679 102.416 250.112 98.7275 239.566 92.4473C235.372 90.2538 233.389 90.5579 230.684 94.5757M249.089 143.384C243.768 143.994 239.457 144.298 235.453 141.863C231.586 139.511 229.673 137.403 227.93 133.314C225.092 126.657 227.526 103.946 230.684 94.5757" stroke="#B72D34"/>
+                                <path d="M261.026 109.218C266.152 115.038 269.795 118.675 269.191 126.492C270.076 136.637 257.046 141.937 249.089 143.384C222.295 146.455 226.88 110.677 230.684 94.5758C233.389 90.5579 235.372 90.2538 239.566 92.4473C250.112 98.7276 254.679 102.416 261.026 109.218Z" fill="#D5726C" stroke="#B72D34"/>
+                                <path d="M254.223 139.691C239.027 140.268 236.197 103.794 237.24 98.1757C238.283 92.5576 271.486 132.044 259.225 137.991L259.195 138.006C257.849 138.659 256.258 139.431 254.223 139.691Z" fill="#E8AEAE" stroke="#E8AEAE"/>
+                                <path d="M254.218 136.686C244.968 137.03 243.201 114.127 243.829 110.601C244.458 107.075 264.718 131.905 257.261 135.624L257.242 135.633C256.424 136.042 255.456 136.524 254.218 136.686Z" fill="#DF9197" stroke="#DF9197"/>
+                                <path d="M91 128.059C108.015 128.759 112.557 132.405 111.5 142.059C103.177 136.94 97.0379 133.008 91 128.059Z" fill="#4F632C"/>
+                                <path d="M138.5 148.5H127.5L119 152.5L108 144.5L114.5 135.5L127.5 129L141 124L149 133.5L143 140.5L138.5 148.5Z" fill="#E8AEAE"/>
+                                <path d="M94.5 147V135.5L113.5 136L115 147L126 145L133 152L125 160L112.5 156L91.5 158L88.5 149.5L94.5 147Z" fill="#D5726C"/>
+                                <path d="M133 152L125 160L114 155L116 146.5C119.503 145.661 121.825 145.458 126.5 145.5L133 152Z" fill="#D5726C"/>
+                                <path d="M109 138L113 126C119.75 126.309 123.876 127.24 128.5 130L121.5 138H109Z" fill="#B72D34"/>
+                                <path d="M136 116.5L123 121L125.5 131L118 134V143L124.5 148L132 143V132L140 127.5L136 116.5Z" fill="#D5726C"/>
+                                <path d="M138 133L147.5 129C152.859 135.638 154.258 139.24 154.5 145.5H143L138 133Z" fill="#D5726C"/>
+                                <path d="M100 148.5L105.5 141H116L117.5 146.5L116 154H103.5L100 148.5Z" fill="#F0CDC8"/>
+                                <path d="M245.5 149.5L244 141.5L252.5 138.5L254 132.5H265L263.5 123L275 121.5L277 132.5H283.5L290 136.5V144L280 145.5V152.5L270.5 154L263.5 149.5L254 154L245.5 149.5Z" fill="#E8AEAE"/>
+                                <path d="M248.5 125.5C256.581 139.405 260.959 143.993 261 146C266.295 135.131 261.771 130.033 248.5 125.5Z" fill="#4F632C"/>
+                                <path d="M283.5 145L293.5 139.5C300.56 145.692 300.621 147.807 300.5 151.5H286L283.5 145Z" fill="#B72D34"/>
+                                <path d="M261 141.5L271 135C275.714 139.807 274.574 144.298 275.5 148.5L266 152.5L261.5 148L261 141.5Z" fill="#B72D34"/>
+                                <path d="M263 154L269.5 144.5L283.5 140L286 147.5H293L297 153V159.5H286V163.5L279 166.5L269.5 163.5L271.5 157.5L263 154Z" fill="#D5726C"/>
+                                <path d="M292.5 156L294 151H304V158H307.5L313.5 161.5L311 169L304 172L292.5 171V174H279L274 171L282 164.5L284 156H292.5Z" fill="#E8AEAE"/>
+                                <path d="M245.5 149.5L244 141.5L255 138L264 142.5L264.5 149L254 154L245.5 149.5Z" fill="#F0CDC8"/>
+                                <path d="M292.5 166V172L301 173L302.5 164.5L297.5 160L289 164.5L292.5 166Z" fill="#D5726C"/>
+                                <path d="M273 152.5L270.5 160.5L266 158.5L267 151L277 146.5L282.5 149.5V154L273 152.5Z" fill="#E8AEAE"/>
+                                <path d="M259 182C262.093 179.904 264.013 178.965 268 178L270 178.312L274 187.5H261.5L259 182Z" fill="#D5726C"/>
+                                <path d="M325.291 181.644C316.841 189.8 311.075 190.422 300.337 189.786L302.814 185.772C312.032 181.627 315.096 179.813 325.291 181.644Z" fill="#4F632C"/>
+                                <path d="M319.406 151.93L316.845 147.853C301.178 160.48 271.649 186.34 277.204 190.412C284.149 195.503 291.883 196 298.938 194.193C315.021 190.074 319.3 164.837 319.406 151.93Z" fill="#B72D34" stroke="#B72D34"/>
+                                <path d="M286.563 154.667C279.57 158.472 271.773 164.459 270.177 169.166C265.913 179.099 271.514 186.576 277.738 190.479C299.092 196.96 315.298 164.061 319.417 151.298C318.86 146.671 315.513 145.409 310.927 146.119C299.054 148.62 295.044 150.333 286.563 154.667Z" fill="#D5726C" stroke="#B72D34"/>
+                                <path d="M274.524 183.839C283.409 193.256 308.179 157.697 309.701 154.128C311.223 150.56 272.819 167.926 272.227 179.686C272.128 181.654 273.818 183.091 274.524 183.839Z" fill="#E8AEAE" stroke="#E8AEAE"/>
+                                <path d="M275.592 181.748C280.314 184.919 295.22 166.611 296.936 163.526C298.652 160.441 277.196 171.726 274.508 179.127C274.115 180.212 275.245 181.516 275.592 181.748Z" fill="#DF9197" stroke="#DF9197"/>
+                                <path d="M266.5 191L270 190L271.5 188.5L278.5 180.5L286.5 184L289.5 193L286 197.5L287 201.5L284.5 207.5L281.5 208H261L258 193.5L266.5 191Z" fill="#F0CDC8"/>
+                                <path d="M254 215.5V221L249.5 220L248 221.5L240.5 221L240 214.5L236.5 211.5L234.5 210L234 202L238.5 198L241.5 194L248.5 194.5L249.5 186.5L257.5 187L262.5 193L263 202.5L274.5 206.5V215.5L265.5 219L257.5 214.5L254 215.5Z" fill="#E8AEAE"/>
+                                <path d="M280 192H273.5L275 197L271.5 199V201.5L273.5 203.5L278 204.5L283.5 201.5C283.5 197 282.06 195.067 280 192Z" fill="#E8AEAE"/>
+                                <path d="M239 197.5L231 201L232.5 210.5L240 215L244.5 213.5L245.5 205L239 197.5Z" fill="#D5726C"/>
+                                <path d="M254 194.5L249.5 186.5C248.811 191.15 248.876 194.147 249 199.5L254 205.5V194.5Z" fill="#F0CDC8"/>
+                                <path d="M296.5 191L285.5 193.5L285 203.5L294 206.5C297.043 205.604 298.486 204.346 300.5 200.5L296.5 191Z" fill="#D5726C"/>
+                                <path d="M272 201L266 205L269.5 211L277.5 214.5L281.5 209.5V205L272 201Z" fill="#E8AEAE"/>
+                                <path d="M277.5 207L279 200.5L282 199L291.5 201.5L289.5 210L283.5 211L277.5 207Z" fill="#E8AEAE"/>
+                                <path d="M257.5 214.5L265.5 219L274.5 215.5V206.5L263 202.5V203.5L258 204.5L257 206.5L257.5 214.5Z" fill="#D5726C"/>
+                                <path d="M265 210.5L274.5 206.5V215.5L265.5 219L265 210.5Z" fill="#B72D34"/>
+                                <path d="M247 223V211.5V209.5H255.5L258 211.5L259.5 223C253.543 224.434 250.939 224.256 247 223Z" fill="#F0CDC8"/>
+                                <path d="M273.5 186C271.361 185.246 266.953 184.987 260 188V193L264.5 191.5L271.5 193V199H273.5L276.5 195.5L273.5 186Z" fill="#E8AEAE"/>
+                                <path d="M307.422 216.708C299.911 201.942 293.88 204.371 283.339 207.434L280.826 210.888C288.269 210.553 293.261 211.091 307.422 216.708Z" fill="#4F632C"/>
+                                <path d="M237 196.5C240.508 193.533 243.219 192.264 249 190.5V199.5L250.5 201.5L249 205L242.5 206L237 201V196.5Z" fill="#D5726C"/>
+                                <path d="M237 196.5V201L249 195.5V190.5C243.796 191.809 241.135 193.054 237 196.5Z" fill="#B72D34"/>
+                                <path d="M79 189C82.4974 179.874 86.113 177.784 98 184L103 187C97.3419 189.757 93.672 191.038 79 189Z" fill="#4F632C"/>
+                                <path d="M177 187C165.837 187.73 160.364 192.817 156.5 203.5C164.438 194.991 168.958 192.005 177 187Z" fill="#4F632C"/>
+                                <path d="M106.58 185.255C97.062 185.226 93.6337 182.452 90.5838 180.819C88.0158 179.123 82.1999 174.264 82.0558 169.635C81.2063 164.473 82.2003 162.446 82.8314 161.795C88.7201 156.313 92.9814 153.889 102.077 150.575C104.89 149.313 106.67 149.177 110.102 149.658C121.574 153.96 126.85 156.352 133.958 160.576C134.913 162.378 135.999 167.443 132.701 173.284C131.317 176.83 124.767 180.818 123.359 181.779C119.413 183.481 116.098 185.283 106.58 185.255Z" fill="#B72D34"/>
+                                <path d="M102.077 150.575C95.7934 156.801 89.9123 157.816 84.3474 163.656C82.6202 165.469 81.991 167.551 82.0558 169.635M102.077 150.575C104.89 149.313 106.67 149.177 110.102 149.658M102.077 150.575C92.9814 153.889 88.7201 156.313 82.8314 161.795C82.2003 162.446 81.2063 164.473 82.0558 169.635M110.102 149.658C114.611 151.815 127.21 156.599 131.883 164.365C133.85 167.635 133.707 170.703 132.701 173.284M110.102 149.658C121.574 153.96 126.85 156.352 133.958 160.576C134.913 162.378 135.999 167.443 132.701 173.284M132.701 173.284C131.317 176.83 124.767 180.818 123.359 181.779C119.413 183.481 116.098 185.283 106.58 185.255C97.062 185.226 93.6337 182.452 90.5838 180.819C88.0158 179.123 82.1999 174.264 82.0558 169.635" stroke="#B72D34"/>
+                                <path d="M159 192C154.281 191.11 151.827 192.179 147.5 194.5L145.5 199.5L155 205L166 201L159 192Z" fill="#B72D34"/>
+                                <path d="M95.5 188.5L102.5 183.5H109.5L111.5 177C113.9 175.774 115.562 175.508 120 177V181H124L125.5 177L136 178.5L138 188.5L131 200L111.5 193.5L102.5 197C97.0725 194.873 97.2661 194.779 95.5 188.5Z" fill="#E8AEAE"/>
+                                <path d="M120 186V181H124L122 184.5L123 187L120 186Z" fill="#F0CDC8"/>
+                                <path d="M128.5 188V174.5C139.207 175.257 142.372 177.809 146.5 183.5L138.5 193L128.5 188Z" fill="#D5726C"/>
+                                <path d="M100 182.5L106 174L112 172.5L118.5 184.5L109 190L100 182.5Z" fill="#D5726C"/>
+                                <path d="M110 204.5L99 199C100.215 191.884 102.474 189.138 110 187L117 195L110 204.5Z" fill="#B72D34"/>
+                                <path d="M149.5 189H139L134.5 192.5V203.5L144.5 207L149.5 200V189Z" fill="#E8AEAE"/>
+                                <path d="M113.5 209.5L111 198L117.5 191L125.5 192L136.5 198L145 203L140 213.5H127.5L124.5 208L113.5 209.5Z" fill="#D5726C"/>
+                                <path d="M201 224L204.5 211H218L214.5 226.5L201 224Z" fill="#D5726C"/>
+                                <path d="M224 213.5L228.5 208.5H240.5L242 211.5L240.5 224H224V213.5Z" fill="#B72D34"/>
+                                <path d="M242 211.5C234.958 213.396 231.016 213.867 224 213.5L227 208.5H240.5L242 211.5Z" fill="#E8AEAE" fill-opacity="0.905882"/>
+                                <path d="M211 229.5H227L230 224.5V212.5L218.5 212L211 216.5V229.5Z" fill="#E8AEAE"/>
+                                <path d="M233 196L221.5 197.533L219 201.333L221.5 214L224.5 213.5L235.5 209.5L233 196Z" fill="#E8AEAE"/>
+                                <path d="M230.5 200L220 200.5L218.5 202.5L222.5 214C225.441 213.874 229.011 212.966 233 212L230.5 200Z" fill="#E8AEAE"/>
+                                <path d="M147.5 216.5H140.5L142 208L144.5 196L156 201L158.5 206.5L160 218.5L148.5 220.5L147.5 216.5Z" fill="#E8AEAE"/>
+                                <path d="M150.5 208L153.5 196L168.5 202L163 211.5L150.5 208Z" fill="#F0CDC8"/>
+                                <path d="M123.5 201.5L122 188.511C129.546 187.545 132.693 187.988 137.5 189.511L141.5 197.011L134.5 205.511L123.5 201.5Z" fill="#F0CDC8"/>
+                                <path d="M146.5 207L136.5 200C130.895 207.563 130.04 210.911 129.5 216.5L141.5 219.5L148 211L146.5 207Z" fill="#B72D34"/>
+                                <path d="M141.5 219.5L146.5 207L148 211C147.589 215.553 145.433 216.99 141.5 219.5Z" fill="#D5726C"/>
+                                <path d="M155.5 222L154 208.5L170 210.5L168.5 222H155.5Z" fill="#D5726C"/>
+                                <path d="M204.887 238.564C207.832 228.528 206.266 224.057 184.19 223.016C184.19 223.016 187.937 231.577 193.543 233.296C199.15 235.015 204.887 238.564 204.887 238.564Z" fill="#4F632C"/>
+                                <path d="M188.713 226.753C176.171 226.727 167.849 218.884 167.213 214.253L218.213 178.753C220.046 177.586 224.213 177.053 224.213 186.253C224.213 195.453 217.046 209.086 212.713 214.253C208.889 219.479 200.043 226.776 188.713 226.753Z" fill="#B72D34" stroke="#B72D34"/>
+                                <path d="M167.134 214.182C166.999 212.125 178.448 193.878 217.31 178.582C219.511 178.104 220.53 177.643 221.245 179.297C221.961 180.952 215.96 191.041 203.223 202.956C187.303 217.848 167.268 216.239 167.134 214.182Z" fill="#B72D34" stroke="#B72D34"/>
+                                <path d="M167.5 213.5C169.75 208.63 178.447 193.878 217.309 178.582C219.511 178.104 220.529 177.643 221.245 179.297C221.96 180.952 215.625 191.516 202.5 203C182.5 220.5 165.25 218.37 167.5 213.5Z" fill="#D5726C" stroke="#B72D34"/>
+                                <path d="M177 204C177.833 203.167 178.193 202.28 182.713 199.253C189.197 194.91 198.541 190.368 211.5 185.5C212.167 185.167 210.643 187.5 205.5 192C198.5 198.125 193.713 202.753 185.713 206.753C181.47 208.874 175.213 210.753 174.213 209.253C173.413 208.053 176 204.833 177 204Z" fill="#E8AEAE" stroke="#E8AEAE"/>
+                                <path d="M177.497 205.274C177.713 205.063 179.852 202.076 182.601 200.479C185.344 198.886 190.048 196.357 193.739 194.834C197.162 193.421 199.642 192.973 200.638 192.476C200.814 192.388 198.051 195.001 196.011 196.763C194.193 198.334 187.069 202.878 184.949 203.935C183.472 204.672 178.659 206.217 177.135 205.941C176.753 205.872 177.235 205.487 177.497 205.274Z" fill="#DF9197" stroke="#DF9197"/>
+                                <path d="M161 200.5L175.5 193.5L179.5 203L172.5 211H164L161 200.5Z" fill="#E8AEAE"/>
+                                <path d="M170 200.5L175.5 193.5L179.5 203L172.5 211L170 200.5Z" fill="#F0CDC8"/>
+                                <path d="M225.5 202C220.773 201.511 218.233 201.374 214 201.5C212.712 209.29 212.614 212.721 214 216.5H219.75L225.5 214.5V202Z" fill="#D5726C"/>
+                            </svg>
+                        </div>
+                        <div class="scheese-sliced">
+                            <div class="scheese-cake"></div>
+
+                            <div class="sb-slice">
+                                <div class="scheese-cake-slice"></div>
+                                <div class="scheese-cake-slice2"></div>
+                            </div>
+
+                            <div class="scheese-cake-front"></div>
+
+                            <svg class="element-back" width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M155.5 118C157.425 113.589 159.351 111.236 166 107.5L178 119.5L188 118L192.5 112L199 99C205.509 100.03 207.771 101.013 211 103V114L206 125.5L169.5 128L155.5 118Z" fill="#E8AEAE"/>
+                                <path d="M180 112L188 104.5H192L198 116.5L185.5 122.5L180 112Z" fill="#B72D34"/>
+                                <path d="M166.5 120L175.5 109L185 110L187.5 120L195.5 122.5V135.5L184 137L179.5 127.5L166.5 120Z" fill="#D5726C"/>
+                                <path d="M215 105L225.5 102L236.5 115.5L230 135H217.5L216 127L201.5 126V112.5L215 110.5V105Z" fill="#D5726C"/>
+                                <path d="M199 105C206.366 114.494 208.469 120.586 209.5 129.5C215.313 117.007 211.772 111.274 199 105Z" fill="#4F632C"/>
+                                <path d="M219.5 120.5H228.5V118L222.5 116H214L209 130H217L216 126.5L219.5 120.5Z" fill="#F0CDC8"/>
+                                <path d="M199 123L206.5 121.5C209.906 124.642 210.837 126.655 211.5 130.5L209.5 133H200L199 123Z" fill="#B72D34"/>
+                                <path d="M184 127.696L140.515 104.897L135.426 102.105C133.267 101.33 130.8 104.804 132.651 113.738C134.501 122.671 140.515 131.884 146.066 136.072C151.618 140.259 163.183 141.655 168.271 140.724C178.109 138.925 184 134.676 184 127.696Z" fill="#B72D34" stroke="#B72D34"/>
+                                <path d="M297.184 125.101C282.53 125.881 279.745 128.767 283.217 137.718C289.667 134.144 292.834 131.531 297.184 125.101Z" fill="#4F632C"/>
+                                <path d="M261.026 109.218C266.152 115.038 269.795 118.675 269.191 126.492C270.076 136.636 257.046 141.937 249.089 143.384C243.768 143.994 239.457 144.298 235.453 141.863C231.586 139.511 229.673 137.403 227.93 133.314C225.092 126.657 227.526 103.946 230.684 94.5757C233.389 90.5579 235.372 90.2538 239.566 92.4473C250.112 98.7275 254.679 102.416 261.026 109.218Z" fill="#B72D34"/>
+                                <path d="M249.089 143.384C234.158 145.095 229.066 133.502 227.157 120.912C227.39 111.06 228.151 105.298 230.684 94.5757M249.089 143.384C257.046 141.937 270.076 136.636 269.191 126.492C269.795 118.675 266.152 115.038 261.026 109.218C254.679 102.416 250.112 98.7275 239.566 92.4473C235.372 90.2538 233.389 90.5579 230.684 94.5757M249.089 143.384C243.768 143.994 239.457 144.298 235.453 141.863C231.586 139.511 229.673 137.403 227.93 133.314C225.092 126.657 227.526 103.946 230.684 94.5757" stroke="#B72D34"/>
+                                <path d="M261.026 109.218C266.152 115.038 269.795 118.675 269.191 126.492C270.076 136.637 257.046 141.937 249.089 143.384C222.295 146.455 226.88 110.677 230.684 94.5758C233.389 90.5579 235.372 90.2538 239.566 92.4473C250.112 98.7276 254.679 102.416 261.026 109.218Z" fill="#D5726C" stroke="#B72D34"/>
+                                <path d="M254.223 139.691C239.027 140.268 236.197 103.794 237.24 98.1757C238.283 92.5576 271.486 132.044 259.225 137.991L259.195 138.006C257.849 138.659 256.258 139.431 254.223 139.691Z" fill="#E8AEAE" stroke="#E8AEAE"/>
+                                <path d="M254.218 136.686C244.968 137.03 243.201 114.127 243.829 110.601C244.458 107.075 264.718 131.905 257.261 135.624L257.242 135.633C256.424 136.042 255.456 136.524 254.218 136.686Z" fill="#DF9197" stroke="#DF9197"/>
+                                <path d="M91 128.059C108.015 128.759 112.557 132.405 111.5 142.059C103.177 136.94 97.0379 133.008 91 128.059Z" fill="#4F632C"/>
+                                <path d="M138.5 148.5H127.5L119 152.5L108 144.5L114.5 135.5L127.5 129L141 124L149 133.5L143 140.5L138.5 148.5Z" fill="#E8AEAE"/>
+                                <path d="M94.5 147V135.5L113.5 136L115 147L126 145L133 152L125 160L112.5 156L91.5 158L88.5 149.5L94.5 147Z" fill="#D5726C"/>
+                                <path d="M133 152L125 160L114 155L116 146.5C119.503 145.661 121.825 145.458 126.5 145.5L133 152Z" fill="#D5726C"/>
+                                <path d="M109 138L113 126C119.75 126.309 123.876 127.24 128.5 130L121.5 138H109Z" fill="#B72D34"/>
+                                <path d="M136 116.5L123 121L125.5 131L118 134V143L124.5 148L132 143V132L140 127.5L136 116.5Z" fill="#D5726C"/>
+                                <path d="M138 133L147.5 129C152.859 135.638 154.258 139.24 154.5 145.5H143L138 133Z" fill="#D5726C"/>
+                                <path d="M100 148.5L105.5 141H116L117.5 146.5L116 154H103.5L100 148.5Z" fill="#F0CDC8"/>
+                                <path d="M245.5 149.5L244 141.5L252.5 138.5L254 132.5H265L263.5 123L275 121.5L277 132.5H283.5L290 136.5V144L280 145.5V152.5L270.5 154L263.5 149.5L254 154L245.5 149.5Z" fill="#E8AEAE"/>
+                                <path d="M248.5 125.5C256.581 139.405 260.959 143.993 261 146C266.295 135.131 261.771 130.033 248.5 125.5Z" fill="#4F632C"/>
+                                <path d="M283.5 145L293.5 139.5C300.56 145.692 300.621 147.807 300.5 151.5H286L283.5 145Z" fill="#B72D34"/>
+                                <path d="M261 141.5L271 135C275.714 139.807 274.574 144.298 275.5 148.5L266 152.5L261.5 148L261 141.5Z" fill="#B72D34"/>
+                                <path d="M263 154L269.5 144.5L283.5 140L286 147.5H293L297 153V159.5H286V163.5L279 166.5L269.5 163.5L271.5 157.5L263 154Z" fill="#D5726C"/>
+                                <path d="M292.5 156L294 151H304V158H307.5L313.5 161.5L311 169L304 172L292.5 171V174H279L274 171L282 164.5L284 156H292.5Z" fill="#E8AEAE"/>
+                                <path d="M245.5 149.5L244 141.5L255 138L264 142.5L264.5 149L254 154L245.5 149.5Z" fill="#F0CDC8"/>
+                                <path d="M292.5 166V172L301 173L302.5 164.5L297.5 160L289 164.5L292.5 166Z" fill="#D5726C"/>
+                                <path d="M273 152.5L270.5 160.5L266 158.5L267 151L277 146.5L282.5 149.5V154L273 152.5Z" fill="#E8AEAE"/>
+                            </svg>
+
+                            <svg class="element-slice" width="400" height="400" viewBox="-64 -40 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M259 182C262.093 179.904 264.013 178.965 268 178L270 178.312L274 187.5H261.5L259 182Z" fill="#D5726C"/>
+                                <path d="M325.291 181.644C316.841 189.8 311.075 190.422 300.337 189.786L302.814 185.772C312.032 181.627 315.096 179.813 325.291 181.644Z" fill="#4F632C"/>
+                                <path d="M319.406 151.93L316.845 147.853C301.178 160.48 271.649 186.34 277.204 190.412C284.149 195.503 291.883 196 298.938 194.193C315.021 190.074 319.3 164.837 319.406 151.93Z" fill="#B72D34" stroke="#B72D34"/>
+                                <path d="M286.563 154.667C279.57 158.472 271.773 164.459 270.177 169.166C265.913 179.099 271.514 186.576 277.738 190.479C299.092 196.96 315.298 164.061 319.417 151.298C318.86 146.671 315.513 145.409 310.927 146.119C299.054 148.62 295.044 150.333 286.563 154.667Z" fill="#D5726C" stroke="#B72D34"/>
+                                <path d="M274.524 183.839C283.409 193.256 308.179 157.697 309.701 154.128C311.223 150.56 272.819 167.926 272.227 179.686C272.128 181.654 273.818 183.091 274.524 183.839Z" fill="#E8AEAE" stroke="#E8AEAE"/>
+                                <path d="M275.592 181.748C280.314 184.919 295.22 166.611 296.936 163.526C298.652 160.441 277.196 171.726 274.508 179.127C274.115 180.212 275.245 181.516 275.592 181.748Z" fill="#DF9197" stroke="#DF9197"/>
+                                <path d="M266.5 191L270 190L271.5 188.5L278.5 180.5L286.5 184L289.5 193L286 197.5L287 201.5L284.5 207.5L281.5 208H261L258 193.5L266.5 191Z" fill="#F0CDC8"/>
+                                <path d="M254 215.5V221L249.5 220L248 221.5L240.5 221L240 214.5L236.5 211.5L234.5 210L234 202L238.5 198L241.5 194L248.5 194.5L249.5 186.5L257.5 187L262.5 193L263 202.5L274.5 206.5V215.5L265.5 219L257.5 214.5L254 215.5Z" fill="#E8AEAE"/>
+                                <path d="M280 192H273.5L275 197L271.5 199V201.5L273.5 203.5L278 204.5L283.5 201.5C283.5 197 282.06 195.067 280 192Z" fill="#E8AEAE"/>
+                                <path d="M239 197.5L231 201L232.5 210.5L240 215L244.5 213.5L245.5 205L239 197.5Z" fill="#D5726C"/>
+                                <path d="M254 194.5L249.5 186.5C248.811 191.15 248.876 194.147 249 199.5L254 205.5V194.5Z" fill="#F0CDC8"/>
+                                <path d="M296.5 191L285.5 193.5L285 203.5L294 206.5C297.043 205.604 298.486 204.346 300.5 200.5L296.5 191Z" fill="#D5726C"/>
+                                <path d="M272 201L266 205L269.5 211L277.5 214.5L281.5 209.5V205L272 201Z" fill="#E8AEAE"/>
+                                <path d="M277.5 207L279 200.5L282 199L291.5 201.5L289.5 210L283.5 211L277.5 207Z" fill="#E8AEAE"/>
+                                <path d="M257.5 214.5L265.5 219L274.5 215.5V206.5L263 202.5V203.5L258 204.5L257 206.5L257.5 214.5Z" fill="#D5726C"/>
+                                <path d="M265 210.5L274.5 206.5V215.5L265.5 219L265 210.5Z" fill="#B72D34"/>
+                                <path d="M247 223V211.5V209.5H255.5L258 211.5L259.5 223C253.543 224.434 250.939 224.256 247 223Z" fill="#F0CDC8"/>
+                                <path d="M273.5 186C271.361 185.246 266.953 184.987 260 188V193L264.5 191.5L271.5 193V199H273.5L276.5 195.5L273.5 186Z" fill="#E8AEAE"/>
+                                <path d="M307.422 216.708C299.911 201.942 293.88 204.371 283.339 207.434L280.826 210.888C288.269 210.553 293.261 211.091 307.422 216.708Z" fill="#4F632C"/>
+                                <path d="M237 196.5C240.508 193.533 243.219 192.264 249 190.5V199.5L250.5 201.5L249 205L242.5 206L237 201V196.5Z" fill="#D5726C"/>
+                                <path d="M237 196.5V201L249 195.5V190.5C243.796 191.809 241.135 193.054 237 196.5Z" fill="#B72D34"/>
+                            </svg>
+
+                            <svg class="element-front" width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M79 189C82.4974 179.874 86.113 177.784 98 184L103 187C97.3419 189.757 93.672 191.038 79 189Z" fill="#4F632C"/>
+                                <path d="M177 187C165.837 187.73 160.364 192.817 156.5 203.5C164.438 194.991 168.958 192.005 177 187Z" fill="#4F632C"/>
+                                <path d="M106.58 185.255C97.062 185.226 93.6337 182.452 90.5838 180.819C88.0158 179.123 82.1999 174.264 82.0558 169.635C81.2063 164.473 82.2003 162.446 82.8314 161.795C88.7201 156.313 92.9814 153.889 102.077 150.575C104.89 149.313 106.67 149.177 110.102 149.658C121.574 153.96 126.85 156.352 133.958 160.576C134.913 162.378 135.999 167.443 132.701 173.284C131.317 176.83 124.767 180.818 123.359 181.779C119.413 183.481 116.098 185.283 106.58 185.255Z" fill="#B72D34"/>
+                                <path d="M102.077 150.575C95.7934 156.801 89.9123 157.816 84.3474 163.656C82.6202 165.469 81.991 167.551 82.0558 169.635M102.077 150.575C104.89 149.313 106.67 149.177 110.102 149.658M102.077 150.575C92.9814 153.889 88.7201 156.313 82.8314 161.795C82.2003 162.446 81.2063 164.473 82.0558 169.635M110.102 149.658C114.611 151.815 127.21 156.599 131.883 164.365C133.85 167.635 133.707 170.703 132.701 173.284M110.102 149.658C121.574 153.96 126.85 156.352 133.958 160.576C134.913 162.378 135.999 167.443 132.701 173.284M132.701 173.284C131.317 176.83 124.767 180.818 123.359 181.779C119.413 183.481 116.098 185.283 106.58 185.255C97.062 185.226 93.6337 182.452 90.5838 180.819C88.0158 179.123 82.1999 174.264 82.0558 169.635" stroke="#B72D34"/>
+                                <path d="M159 192C154.281 191.11 151.827 192.179 147.5 194.5L145.5 199.5L155 205L166 201L159 192Z" fill="#B72D34"/>
+                                <path d="M95.5 188.5L102.5 183.5H109.5L111.5 177C113.9 175.774 115.562 175.508 120 177V181H124L125.5 177L136 178.5L138 188.5L131 200L111.5 193.5L102.5 197C97.0725 194.873 97.2661 194.779 95.5 188.5Z" fill="#E8AEAE"/>
+                                <path d="M120 186V181H124L122 184.5L123 187L120 186Z" fill="#F0CDC8"/>
+                                <path d="M128.5 188V174.5C139.207 175.257 142.372 177.809 146.5 183.5L138.5 193L128.5 188Z" fill="#D5726C"/>
+                                <path d="M100 182.5L106 174L112 172.5L118.5 184.5L109 190L100 182.5Z" fill="#D5726C"/>
+                                <path d="M110 204.5L99 199C100.215 191.884 102.474 189.138 110 187L117 195L110 204.5Z" fill="#B72D34"/>
+                                <path d="M149.5 189H139L134.5 192.5V203.5L144.5 207L149.5 200V189Z" fill="#E8AEAE"/>
+                                <path d="M113.5 209.5L111 198L117.5 191L125.5 192L136.5 198L145 203L140 213.5H127.5L124.5 208L113.5 209.5Z" fill="#D5726C"/>
+                                <path d="M201 224L204.5 211H218L214.5 226.5L201 224Z" fill="#D5726C"/>
+                                <path d="M224 213.5L228.5 208.5H240.5L242 211.5L240.5 224H224V213.5Z" fill="#B72D34"/>
+                                <path d="M242 211.5C234.958 213.396 231.016 213.867 224 213.5L227 208.5H240.5L242 211.5Z" fill="#E8AEAE" fill-opacity="0.905882"/>
+                                <path d="M211 229.5H227L230 224.5V212.5L218.5 212L211 216.5V229.5Z" fill="#E8AEAE"/>
+                                <path d="M233 196L221.5 197.533L219 201.333L221.5 214L224.5 213.5L235.5 209.5L233 196Z" fill="#E8AEAE"/>
+                                <path d="M230.5 200L220 200.5L218.5 202.5L222.5 214C225.441 213.874 229.011 212.966 233 212L230.5 200Z" fill="#E8AEAE"/>
+                                <path d="M147.5 216.5H140.5L142 208L144.5 196L156 201L158.5 206.5L160 218.5L148.5 220.5L147.5 216.5Z" fill="#E8AEAE"/>
+                                <path d="M150.5 208L153.5 196L168.5 202L163 211.5L150.5 208Z" fill="#F0CDC8"/>
+                                <path d="M123.5 201.5L122 188.511C129.546 187.545 132.693 187.988 137.5 189.511L141.5 197.011L134.5 205.511L123.5 201.5Z" fill="#F0CDC8"/>
+                                <path d="M146.5 207L136.5 200C130.895 207.563 130.04 210.911 129.5 216.5L141.5 219.5L148 211L146.5 207Z" fill="#B72D34"/>
+                                <path d="M141.5 219.5L146.5 207L148 211C147.589 215.553 145.433 216.99 141.5 219.5Z" fill="#D5726C"/>
+                                <path d="M155.5 222L154 208.5L170 210.5L168.5 222H155.5Z" fill="#D5726C"/>
+                                <path d="M204.887 238.564C207.832 228.528 206.266 224.057 184.19 223.016C184.19 223.016 187.937 231.577 193.543 233.296C199.15 235.015 204.887 238.564 204.887 238.564Z" fill="#4F632C"/>
+                                <path d="M188.713 226.753C176.171 226.727 167.849 218.884 167.213 214.253L218.213 178.753C220.046 177.586 224.213 177.053 224.213 186.253C224.213 195.453 217.046 209.086 212.713 214.253C208.889 219.479 200.043 226.776 188.713 226.753Z" fill="#B72D34" stroke="#B72D34"/>
+                                <path d="M167.134 214.182C166.999 212.125 178.448 193.878 217.31 178.582C219.511 178.104 220.53 177.643 221.245 179.297C221.961 180.952 215.96 191.041 203.223 202.956C187.303 217.848 167.268 216.239 167.134 214.182Z" fill="#B72D34" stroke="#B72D34"/>
+                                <path d="M167.5 213.5C169.75 208.63 178.447 193.878 217.309 178.582C219.511 178.104 220.529 177.643 221.245 179.297C221.96 180.952 215.625 191.516 202.5 203C182.5 220.5 165.25 218.37 167.5 213.5Z" fill="#D5726C" stroke="#B72D34"/>
+                                <path d="M177 204C177.833 203.167 178.193 202.28 182.713 199.253C189.197 194.91 198.541 190.368 211.5 185.5C212.167 185.167 210.643 187.5 205.5 192C198.5 198.125 193.713 202.753 185.713 206.753C181.47 208.874 175.213 210.753 174.213 209.253C173.413 208.053 176 204.833 177 204Z" fill="#E8AEAE" stroke="#E8AEAE"/>
+                                <path d="M177.497 205.274C177.713 205.063 179.852 202.076 182.601 200.479C185.344 198.886 190.048 196.357 193.739 194.834C197.162 193.421 199.642 192.973 200.638 192.476C200.814 192.388 198.051 195.001 196.011 196.763C194.193 198.334 187.069 202.878 184.949 203.935C183.472 204.672 178.659 206.217 177.135 205.941C176.753 205.872 177.235 205.487 177.497 205.274Z" fill="#DF9197" stroke="#DF9197"/>
+                                <path d="M161 200.5L175.5 193.5L179.5 203L172.5 211H164L161 200.5Z" fill="#E8AEAE"/>
+                                <path d="M170 200.5L175.5 193.5L179.5 203L172.5 211L170 200.5Z" fill="#F0CDC8"/>
+                                <path d="M225.5 202C220.773 201.511 218.233 201.374 214 201.5C212.712 209.29 212.614 212.721 214 216.5H219.75L225.5 214.5V202Z" fill="#D5726C"/>
+                            </svg>
+                        </div>
+                    </div>
+
                 </div>
-    </foreignObject>
+            </foreignObject>
 </svg>
