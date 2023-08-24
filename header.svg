@@ -2507,6 +2507,48 @@
         z-index: 1;
     }
 
+    @keyframes yell-jiggle-complete {
+        0% {
+            transform: scaleY(1.03);
+            opacity: 1;
+        }
+
+        2% {
+            transform: scaleY(1.02);
+        }
+
+        5% {
+            transform: scaleY(0.98);
+        }
+
+        9% {
+            transform: scaleY(1);
+        }
+
+        49% {
+            opacity: 1;
+            transform: scaleY(1);
+        }
+
+        50% {
+            opacity: 0;
+            transform: scaleY(0.94);
+        }
+
+        51% {
+            opacity: 0;
+        }
+
+        99% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+            transform: scaleY(1);
+        }
+    }
+        
     .yell-complete {
         top: 0px;
         position: absolute;
@@ -2523,7 +2565,7 @@
             50% 95%,
             50% 99%;
     }
-
+        
     .yell-complete::after {
         content: "";
         position: relative;
@@ -3405,6 +3447,13 @@
         top: 0px;
     }
 
+    .yell-element {
+        position: absolute;
+        animation: 4s infinite yell-jiggle-complete;
+        transform-origin: 0% 400px;
+        z-index: 1;
+    }
+
     .element {
         position: absolute;
         animation: 4s infinite jiggle-complete;
@@ -3965,7 +4014,7 @@
                         <div class="yell-text">CSS is cool</div>
                         <div class="yell">
                             <div class="yell-complete"></div>
-                            <svg class="element" width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg class="yell-element" width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M200.425 69C127.547 69 68.4671 99.9606 68.4671 138.152C65.6285 165.423 64.0703 184.933 70.4514 184.254C71.5598 201.215 79.5 207.305 83.3496 204.298C87.1992 201.292 85.7274 198.438 86.3261 192.272C93 197 93.5774 204.298 97.736 221.336C101.546 236.944 113.115 235.367 115.595 222.338C116.135 219.5 118.5 211.815 121.052 210.813C126.642 211.045 123.488 232.377 139.407 225.846C146.049 216.066 149.526 211.864 154.289 211.815C160.242 211.815 165.543 223.47 171 237C175.634 250.67 192.828 252.033 200.765 242.512C210.327 232.567 214.836 227.177 222 228C230.929 228 231.522 237 238.963 242.512C246.405 248.024 259.303 245.519 264.263 234.494C270.25 221.17 273.263 207.015 280.294 207.305C285.751 207.53 287.766 212.817 290.653 220.835C294.621 231.859 306.814 231.027 310 222.338C314.961 208.808 316.508 198.786 319.485 194.777C323.048 195.914 319.423 202.795 322.461 207.305C325.5 211.815 330.491 204.624 332.383 187.261C336.352 184.254 335.358 163.334 332.383 138.152C332.383 99.9606 273.303 69 200.425 69Z" fill="#E1E1DF"/>
                                 <ellipse cx="200" cy="138" rx="130" ry="69" fill="#F3F3F0" fill-opacity="0.5"/>
                                 <ellipse cx="200" cy="135" rx="127" ry="66" fill="#F3F3F0"/>
