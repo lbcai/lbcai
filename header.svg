@@ -276,7 +276,7 @@
         top: 6em;
         background-repeat: no-repeat;
         background-image:
-            linear-gradient(55deg, transparent 60%, var(--tm-cake-top) 60.75%);
+            linear-gradient(55deg, transparent 60%, transparent 60.75%);
         background-size:
             100% 50%;
         background-position:
@@ -305,8 +305,8 @@
         background-color: transparent;
         background-repeat: no-repeat;
         background-image:
-            radial-gradient(ellipse, var(--tm-cake-top) 70%, transparent 70.75%),
-            radial-gradient(ellipse, var(--tm-cake-body) 70%, transparent 72%),
+            radial-gradient(ellipse, transparent 70%, transparent 70.75%),
+            radial-gradient(ellipse, transparent 70%, transparent 72%),
             radial-gradient(ellipse, var(--tm-cake-body) 70%, transparent 71%),
             linear-gradient(var(--tm-cake-body) 58%, var(--crumble) 58%),
             linear-gradient(55deg, transparent, transparent 2.6em, var(--tm-cake-top-shade) 2.7em, var(--tm-cake-top-shade)),
@@ -3909,7 +3909,7 @@
                                 </g>
                             </svg>
 
-                            <svg class="tm-element-slice" width="400" height="400" viewBox="-67 -39 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg class="tm-element-slice" width="400" height="400" viewBox="-65 -39 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <mask id="mask0_69_146" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="208" y="160" width="157" height="98">
                                 <path d="M209 160.5L250 219.5V252L323.5 257L364 160.5H328H209Z" fill="#D9D9D9" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
                                 </mask>
