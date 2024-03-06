@@ -2368,7 +2368,7 @@
         height: var(--size);
         background: no-repeat;
     }
-
+        
     .scheese-cake-slice2::before {
         content: "";
         position: absolute;
@@ -2404,6 +2404,45 @@
             97% -400%,
             97% 100%,
             100% 100%;
+    }
+
+    @media screen and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
+        .scheese-cake-slice2::before {
+            content: "";
+            position: absolute;
+            display: inherit;
+            width: 4.75em;
+            height: 9.4em;
+            border-bottom-right-radius: 90px 70px;
+            left: 15.75em;
+            top: 11em;
+            background-color: transparent;
+            background-repeat: no-repeat;
+            background-image:
+                radial-gradient(ellipse, var(--sb-cake-top) 70%, transparent 71%),
+                radial-gradient(ellipse, var(--scheese4) 70%, transparent 71%),
+                radial-gradient(ellipse, var(--scheese3) 70%, transparent 71%),
+                radial-gradient(ellipse, var(--scheese2) 70%, transparent 71%),
+                radial-gradient(ellipse, var(--scheese1) 70%, transparent 71%),
+                radial-gradient(ellipse, var(--sb-cake-body) 70%, transparent 71%),
+                linear-gradient(var(--sb-cake-body) 40%, var(--scheese-crumble) 40%);
+            background-size:
+                300% 98%,
+                300% 98%,
+                300% 98%,
+                300% 98%,
+                300% 98%,
+                300% 98%,
+                30% 90%;
+            background-position:
+                98% -2500%,
+                98% -1900%,
+                98% -1400%,
+                97% -900%,
+                97% -300%,
+                97% 100%,
+                100% 100%;
+        }
     }
 
     .scheese-cake-front {
