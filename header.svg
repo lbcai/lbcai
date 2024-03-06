@@ -2369,7 +2369,7 @@
         background: no-repeat;
     }
 
-    /* firefox */
+/* chrome/safari and not firefox */
     .scheese-cake-slice2::before {
         content: "";
         position: absolute;
@@ -2398,17 +2398,17 @@
             300% 98%,
             30% 90%;
         background-position:
-            98% -2750%,
-            98% -2200%,
-            98% -1600%,
-            97% -1000%,
+            98% -2500%,
+            98% -1900%,
+            98% -1400%,
+            97% -900%,
             97% -300%,
-            97% 105%,
+            97% 100%,
             100% 100%;
     }
-
-    /* chrome/safari and not firefox */
-    .selector:not(*:root) {
+        
+    /* firefox */
+    @-moz-document url-prefix() {
         .scheese-cake-slice2::before {
             content: "";
             position: absolute;
@@ -2437,12 +2437,12 @@
                 300% 98%,
                 30% 90%;
             background-position:
-                98% -2500%,
-                98% -1900%,
-                98% -1400%,
-                97% -900%,
+                98% -2750%,
+                98% -2200%,
+                98% -1600%,
+                97% -1000%,
                 97% -300%,
-                97% 100%,
+                97% 105%,
                 100% 100%;
         }
     }
