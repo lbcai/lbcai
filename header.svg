@@ -2368,7 +2368,8 @@
         height: var(--size);
         background: no-repeat;
     }
-        
+
+    /* firefox */
     .scheese-cake-slice2::before {
         content: "";
         position: absolute;
@@ -2401,12 +2402,13 @@
             98% -2200%,
             98% -1600%,
             97% -1000%,
-            97% -400%,
-            97% 100%,
+            97% -300%,
+            97% 105%,
             100% 100%;
     }
 
-    @media screen and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
+    /* chrome/safari and not firefox */
+    .selector:not(*:root) {
         .scheese-cake-slice2::before {
             content: "";
             position: absolute;
