@@ -2369,84 +2369,6 @@
         background: no-repeat;
     }
 
-/* chrome/safari and not firefox */
-    .scheese-cake-slice2::before {
-        content: "";
-        position: absolute;
-        display: inherit;
-        width: 4.75em;
-        height: 9.4em;
-        border-bottom-right-radius: 90px 70px;
-        left: 15.75em;
-        top: 11em;
-        background-color: transparent;
-        background-repeat: no-repeat;
-        background-image:
-            radial-gradient(ellipse, var(--sb-cake-top) 70%, transparent 71%),
-            radial-gradient(ellipse, var(--scheese4) 70%, transparent 71%),
-            radial-gradient(ellipse, var(--scheese3) 70%, transparent 71%),
-            radial-gradient(ellipse, var(--scheese2) 70%, transparent 71%),
-            radial-gradient(ellipse, var(--scheese1) 70%, transparent 71%),
-            radial-gradient(ellipse, var(--sb-cake-body) 70%, transparent 71%),
-            linear-gradient(var(--sb-cake-body) 40%, var(--scheese-crumble) 40%);
-        background-size:
-            300% 98%,
-            300% 98%,
-            300% 98%,
-            300% 98%,
-            300% 98%,
-            300% 98%,
-            30% 90%;
-        background-position:
-            98% -2500%,
-            98% -1900%,
-            98% -1400%,
-            97% -900%,
-            97% -300%,
-            97% 100%,
-            100% 100%;
-    }
-        
-    /* firefox */
-    @-moz-document url-prefix() {
-        .scheese-cake-slice2::before {
-            content: "";
-            position: absolute;
-            display: inherit;
-            width: 4.75em;
-            height: 9.4em;
-            border-bottom-right-radius: 90px 70px;
-            left: 15.75em;
-            top: 11em;
-            background-color: transparent;
-            background-repeat: no-repeat;
-            background-image:
-                radial-gradient(ellipse, var(--sb-cake-top) 70%, transparent 71%),
-                radial-gradient(ellipse, var(--scheese4) 70%, transparent 71%),
-                radial-gradient(ellipse, var(--scheese3) 70%, transparent 71%),
-                radial-gradient(ellipse, var(--scheese2) 70%, transparent 71%),
-                radial-gradient(ellipse, var(--scheese1) 70%, transparent 71%),
-                radial-gradient(ellipse, var(--sb-cake-body) 70%, transparent 71%),
-                linear-gradient(var(--sb-cake-body) 40%, var(--scheese-crumble) 40%);
-            background-size:
-                300% 98%,
-                300% 98%,
-                300% 98%,
-                300% 98%,
-                300% 98%,
-                300% 98%,
-                30% 90%;
-            background-position:
-                98% -2750%,
-                98% -2200%,
-                98% -1600%,
-                97% -1000%,
-                97% -300%,
-                97% 105%,
-                100% 100%;
-        }
-    }
-
     .scheese-cake-front {
         animation: 4s infinite jiggle-partial-front;
         transform-origin: 0% 335px;
@@ -4163,7 +4085,21 @@
 
                         <div class="sb-slice">
                             <div class="scheese-cake-slice"></div>
-                            <div class="scheese-cake-slice2"></div>
+                            <div class="scheese-cake-slice2">
+                                <svg width="400" height="400" viewBox="0 -16 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <mask id="mask0_85_4" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="250" y="167" width="78" height="148">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M328 167.55C318.752 191.866 288.942 211.549 250 219.804V314.777H328V167.55Z" fill="#D9D9D9"/>
+                                </mask>
+                                <g mask="url(#mask0_85_4)">
+                                <path d="M329 254.5C329 288.466 278.856 318 217 318C155.144 318 105 288.466 105 254.5C105 220.535 155.144 193 217 193C278.856 193 329 220.535 329 254.5Z" fill="#906C55"/>
+                                <path d="M329.5 238.5C329.5 279.5 278.393 309 213.5 309C148.607 309 96 276.884 96 238.5C96 200.116 148.607 169 213.5 169C278.393 169 329.5 200.116 329.5 238.5Z" fill="#F4E5DB"/>
+                                <path d="M331 223C331 261.66 279.737 293.5 216.5 293.5C153.263 293.5 102 261.66 102 223C102 184.34 153.263 153 216.5 153C279.737 153 331 184.34 331 223Z" fill="#ECCAC6"/>
+                                <path d="M331 204.5C331 243.436 279.908 275.5 217.5 275.5C155.092 275.5 105 243.436 105 204.5C105 165.564 155.592 134 218 134C280.408 134 331 165.564 331 204.5Z" fill="#E3AAAA"/>
+                                <path d="M331 187C331 225.66 277.222 257.5 211.5 257.5C145.778 257.5 93 225.66 93 187C93 148.34 146.278 117 212 117C277.722 117 331 148.34 331 187Z" fill="#D98D92"/>
+                                <ellipse cx="213.5" cy="168" rx="117.5" ry="71" fill="#D67783"/>
+                                </g>
+                                </svg>
+                            </div>
                         </div>
 
                         <div class="scheese-cake-front"></div>
