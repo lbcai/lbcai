@@ -3882,7 +3882,7 @@
                                 </g>
                             </svg>
 
-                            <svg class="tm-element-slice" width="400" height="400" viewBox="-65 -39 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg class="tm-element-slice" width="400" height="400" viewBox="-64 -39 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <mask id="mask0_76_4" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="208" y="160" width="157" height="98">
                                 <path d="M209 160.5L250 219.5V252L323.5 257L364 160.5H328H209Z" fill="#D9D9D9" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
                                 </mask>
